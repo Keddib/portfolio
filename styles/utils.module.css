@@ -50,3 +50,13 @@
 .lightText {
   color: #666;
 }
+
+
+.home {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rebeccapurple;
+}
