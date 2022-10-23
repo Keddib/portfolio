@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+
+  /* Fonts */
+
+  /* Be Vietnam */
+  @font-face {
+    font-family: "Be vietnam";
+    src: url("/fonts/BeVietnam-Regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "Be vietnam";
+    src: url("/fonts/BeVietnam-Medium.woff2") format("woff2");
+    font-weight: 500;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "Be vietnam";
+    src: url("/fonts/BeVietnam-SemiBold.woff2") format("woff2");
+    font-weight: 600;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "Be vietnam";
+    src: url("/fonts/BeVietnam-ExtraBold.woff2") format("woff2");
+    font-weight: 800;
+    font-style: normal;
+  }
+
+
+  /* Fivo sans modern */
+  @font-face {
+    font-family: "Fivo sans modern";
+    src: url("/fonts/FivoSansModern-Medium.woff2") format("woff2");
+    font-weight: 500;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Fivo sans modern";
+    src: url("/fonts/FivoSansModern-Bold.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Fivo sans modern";
+    src: url("/fonts/FivoSansModern-ExtraBlack.woff2") format("woff2");
+    font-weight: 1000;
+    font-style: normal;
+  }
+
+  /* html */
+  @media (min-width: 1600px) {
+    html {
+      font-size: 18px;
+    }
+  }
+  @media (min-width: 1800px) {
+    html {
+      font-size: 20px;
+    }
+  }
+  @media (min-width: 2000px) {
+    html {
+      font-size: 22px;
+    }
+  }
+  @media (min-width: 2200px) {
+    html {
+      font-size: 24px;
+    }
+  }
+  @media (min-width: 2400px) {
+    html {
+      font-size: 26px;
+    }
+  }
+
+  /* svg */
+}
+
+@layer components {
+  .svg-dash line rect{
+    @apply stroke-primary dark:stroke-primary-dark;
+  }
+}
