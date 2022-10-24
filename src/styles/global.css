@@ -82,11 +82,22 @@
     }
   }
 
-  /* svg */
+  /*
+  paadding for sections */
+  .section--default {
+    position: static;
+    padding-top: 8.33333333vw;
+    padding-bottom: 8.33333333vw;
+  }
+
+  @media (min-width: 800px) {
+    .section--default {
+      padding-top: 4.16666667vw;
+      padding-bottom: 4.16666667vw;
+    }
+  }
 }
 
 @layer components {
-  .svg-dash line rect{
-    @apply stroke-primary dark:stroke-primary-dark;
-  }
+
 }

@@ -35,16 +35,16 @@ export default function Layout({ children, home }) {
         <title>{home}</title>
       </Head>
       <main className="h-screen bg-background dark:bg-background-dark text-primary dark:text-primary-dark">
-        <div className='py-3 px-5 flex justify-between items-center'>
+        <header className='py-3 px-5 flex justify-between items-center fixed w-full'>
           <div className='bg-red-500'>logo</div>
           <Dashboard setDarkTheme={setDarkTheme} darkMode={darkMode} />
-        </div>
+        </header>
         {children}
-        <div className='border border-pink-600 flex justify-around'>
+        <footer className='border border-pink-600 flex justify-around'>
           <div className='bg-gray-600'>signture</div>
           <div className='bg-gray-600'>linkedin</div>
           <div className='bg-gray-600'>github</div>
-        </div>
+        </footer>
       </main>
     </div>
   );
