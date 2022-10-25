@@ -10,6 +10,7 @@ module.exports = {
         '24': 'repeat(24,minmax(0,1fr))',
       },
       gridColumnStart: {
+        '12': '12',
         '13': '13',
         '14': '14',
         '15': '15',
@@ -25,6 +26,7 @@ module.exports = {
         '25': '25',
       },
       gridColumnEnd: {
+        '12': '12',
         '13': '13',
         '14': '14',
         '15': '15',
@@ -38,6 +40,9 @@ module.exports = {
         '23': '23',
         '24': '24',
         '25': '25',
+      },
+      transformOrigin: {
+        '50': '50% 0%',
       }
     },
     colors: {
