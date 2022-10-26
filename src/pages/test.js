@@ -4,7 +4,7 @@ import Layout from "src/components/layout";
 
 export default function Test() {
   return (
-    <Layout>
+    <Layout home="Keddib - Home">
       <div className=''>
         <About />
       </div>

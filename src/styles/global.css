@@ -126,8 +126,12 @@
   .will-change-transform {
     will-change: transform;
   }
+  .logo-svg {
+    fill-rule: evenodd;
+  }
 }
 
 @layer components {
+
 
 }

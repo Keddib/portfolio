@@ -9,11 +9,11 @@ import { Draggable } from "src/services/gasp";
 
 export default function Dashboard({ setDarkTheme, darkMode }) {
   const [show, setShow] = useState(false);
-  const [hover, setHover] = useState(false);
   const md = useMedia(mediaQueries.md);
 
   useEffect(() => {
     Draggable.create('#draggable-dashboard', {
+      bounds: "#main-wrapper",
       trigger: "#tobButtonBar",
       // onPress: function () {
       //   console.log("clicked");
@@ -27,28 +27,26 @@ export default function Dashboard({ setDarkTheme, darkMode }) {
       return <button
         id="tobButtonBar"
         onClick={() => { setShow(!show) }}
-        onMouseEnter={() => { setHover(true) }}
-        onMouseLeave={() => { setHover(false) }}
         className="flex justify-between font-FivoSansModern font-extra-black uppercase
-      items-center text-xs bg-background-dark dark:bg-background hover:bg-secondary dark:hover:bg-secondary-dark dark:hover:text-inverted"
+      items-center text-xs bg-background-dark dark:bg-background group-hover:bg-secondary dark:group-hover:bg-secondary-dark dark:group-hover:text-inverted"
       >
         <span className="w-full px-4 md:h-10 flex items-center">Dashboard</span>
         <span className="w-10 h-10 items-center flex justify-center">{show ? "-" : "+"}</span>
       </button>
     } else if (!md) {
-      return <button onClick={() => { setShow(!show) }}>
+      return <button id="tobButtonBar" onClick={() => { setShow(!show) }}>
         <Dashicon className="svg-dash" />
       </button>
     }
   })();
 
   return (
-    <div className="absolute right-6 top-4 text-primary-dark dark:text-primary" id="draggable-dashboard">
+    <div className="group absolute right-6 top-4 text-primary-dark dark:text-primary" id="draggable-dashboard">
       {btn}
       <div className="relative">
         {
           show &&
-          <div className={`absolute  border-2 border-primary dark:border-primary-dark w-full p-6 ${hover && 'border-secondary dark:border-secondary-dark'}`}>
+          <div className={`absolute  border-2 border-primary dark:border-primary-dark w-full p-6 group-hover:border-secondary`}>
             <nav>
               <ul className="text-primary dark:text-primary-dark uppercase font-heavy">
                 <li>

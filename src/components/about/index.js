@@ -13,8 +13,9 @@ export default function About() {
 
   useEffect(() => {
     //
-    Draggable.create("#draggable-img", {
-      trigger: "#topBar2",
+    Draggable.create('#draggable-img', {
+      bounds: "#main-wrapper",
+      trigger: '#topbar',
       onPress: function () {
         console.log("clicked");
       }
@@ -56,7 +57,7 @@ export default function About() {
             </div> */}
             <div id="draggable-img" className="absolute cursor-pointer w-[66.66666667vw] top-1/4 left-1/2 will-change-transform md:w-[41.66666667vw] lg:w-[29.16666667vw]">
               <div className="overflow-hidden font-FivoSansModern max-w-[]">
-                <div id="topbar2" className="flex items-stretch justify-between text-xs font-extrabold uppercase pointer-events-auto font-display hover:bg-tertiary hover:text-primary-dark bg-background dark:bg-background-dark text-tertiary dark:text-tertiary-dark">
+                <div id="topbar" className="flex items-stretch justify-between text-xs font-extrabold uppercase pointer-events-auto font-display bg-background dark:bg-background-dark text-tertiary dark:text-tertiary-dark hover:bg-tertiary dark:hover:bg-tertiary-dark  hover:text-background dark:hover:text-background-dark">
                   <span className="block px-5 py-3 cursor-pointer font-extra-black">-</span>
                   <span className="block w-full px-5 py-3 text-right select-none flex-grow-1 cursor-[grab] touch-none font-extra-black">work</span>
                 </div>

@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import Head from 'next/head';
 import Dashboard from 'src/components/dashborad';
+import Logo from '../logo';
 
 export default function Layout({ children, home }) {
 
@@ -25,18 +26,25 @@ export default function Layout({ children, home }) {
   return (
     <div className={`font-BeVietnam ${darkMode && 'dark'}`}>
       <Head>
-        <link rel="icon" href="/favicon.ico" />
         <meta
           name="description"
           content="Personal portfolio of a web developer"
         />
         <meta name="og:title" content={home} />
+        <link rel="icon" href="favicon/favicon.ico" />
         <meta name="twitter:card" content="summary_large_image" />
+        <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png" />
+        <link rel="manifest" href="favicon/site.webmanifest" />
+        <link rel="mask-icon" href="/faviconsafari-pinned-tab.svg" color="#5bbad5" />
+        <meta name="msapplication-TileColor" content="#da532c" />
+        <meta name="theme-color" content="#ffffff" />
         <title>{home}</title>
       </Head>
-      <main className="bg-background dark:bg-background-dark text-primary dark:text-primary-dark">
-        <header className='py-3 px-5 flex justify-between items-center fixed w-full z-10 w-'>
-          <div className='bg-red-500'>logo</div>
+      <main id="main-wrapper" className="relative bg-background dark:bg-background-dark text-primary dark:text-primary-dark">
+        <header className='relative w-full z-10'>
+          <Logo />
           <Dashboard setDarkTheme={setDarkTheme} darkMode={darkMode} />
         </header>
         {children}
