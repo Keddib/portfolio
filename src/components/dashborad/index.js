@@ -1,8 +1,8 @@
 import Dashicon from "public/icons/dashboard.svg";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useMedia, mediaQueries } from "src/hooks/useMediaQuery";
-import { Draggable } from "src/services/gasp";
+import { Draggable, gsap } from "src/services/gasp";
 
 
 
@@ -12,26 +12,38 @@ export default function Dashboard({ setDarkTheme, darkMode }) {
   const md = useMedia(mediaQueries.md);
 
   useEffect(() => {
-    Draggable.create('#draggable-dashboard', {
-      bounds: "#main-wrapper",
-      trigger: "#tobButtonBar",
-      // onPress: function () {
-      //   console.log("clicked");
-      // }
-    });
+    let ctx = gsap.context(() => {
+
+      const onClick = () => {
+        gsap.to('#draggable-dashboard', { scale: 1.25, duration: 0 });
+      };
+      const onRelease = () => {
+        gsap.to('#draggable-dashboard', { scale: 1, duration: 0 });
+      };
+
+      Draggable.create('#draggable-dashboard', {
+        bounds: "#main-wrapper",
+        trigger: '#tobButtonBar',
+        onDragStart: onClick,
+        onDragEnd: onRelease,
+      });
+
+    }); // <- IMPORTANT! Scopes selector text
+
+    return () => ctx.revert(); // cleanup
+
   }, []);
 
   const btn = (() => {
     if (md || !md && show) {
 
       return <button
-        id="tobButtonBar"
         onClick={() => { setShow(!show) }}
         className="flex justify-between font-FivoSansModern font-extra-black uppercase
       items-center text-xs bg-background-dark dark:bg-background group-hover:bg-secondary dark:group-hover:bg-secondary-dark dark:group-hover:text-inverted"
       >
-        <span className="w-full px-4 md:h-10 flex items-center">Dashboard</span>
-        <span className="w-10 h-10 items-center flex justify-center">{show ? "-" : "+"}</span>
+        <span id="tobButtonBar" className="w-full px-4 md:h-10 flex items-center">Dashboard</span>
+        <span className="w-10 h-10 items-center flex justify-center cursor-pointer">{show ? "-" : "+"}</span>
       </button>
     } else if (!md) {
       return <button id="tobButtonBar" onClick={() => { setShow(!show) }}>
@@ -41,7 +53,7 @@ export default function Dashboard({ setDarkTheme, darkMode }) {
   })();
 
   return (
-    <div className="group absolute right-6 top-4 text-primary-dark dark:text-primary" id="draggable-dashboard">
+    <div className="group absolute right-6 top-4 text-primary-dark dark:text-primary border border-red" id="draggable-dashboard">
       {btn}
       <div className="relative">
         {

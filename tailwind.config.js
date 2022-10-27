@@ -52,6 +52,7 @@ module.exports = {
       'black': '#000000',
       'white': '#ffffff',
       'red': '#ff0000',
+      'pink': '#FF66FF',
       'background': '#f2e8de',
       'background-dark': '#1f1f1f',
       'primary': '#1f1f1f',

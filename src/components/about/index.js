@@ -1,7 +1,7 @@
 import Img1 from "public/images/10.jpeg";
 import Image from 'next/image';
 import { useEffect, useRef } from "react";
-import { Draggable } from "src/services/gasp";
+import { Draggable, gsap } from "src/services/gasp";
 import Button from "../button";
 import Number from "../number";
 import Title2 from "../title2";
@@ -9,18 +9,37 @@ import Title3 from "../title3";
 
 export default function About() {
 
-  // const imgRef = useRef(null);
-
   useEffect(() => {
-    //
-    Draggable.create('#draggable-img', {
-      bounds: "#main-wrapper",
-      trigger: '#topbar',
-      onPress: function () {
-        console.log("clicked");
-      }
-      // onDrag
-    });
+
+    // create our context. This function is invoked immediately and all GSAP
+    // animations and Draggable created during the execution of this function
+    // get recorded so we can revert() them later (cleanup)
+    let ctx = gsap.context(() => {
+
+      // all our animations can use selector text like ".box"
+      // and it's properly scoped to our component
+
+      const onClick = () => {
+        gsap.to('#draggable-img', { scale: 1.25, duration: 0 });
+        console.log();
+      };
+      const onRelease = () => {
+        gsap.to('#draggable-img', { scale: 1, duration: 0 });
+      };
+
+      Draggable.create(['#draggable-img', '#draggable-img2'], {
+        bounds: "#main-wrapper",
+        trigger: '#topbar',
+        onDragStart: onClick,
+        onDragEnd: onRelease,
+        onPress: onClick,
+        onRelease: onRelease
+      });
+
+    }); // <- IMPORTANT! Scopes selector text
+
+    return () => ctx.revert(); // cleanup
+
   }, []);
 
   return (
@@ -55,8 +74,21 @@ export default function About() {
               </div>
               <Image src={Img1} alt="person at work" />
             </div> */}
-            <div id="draggable-img" className="absolute cursor-pointer w-[66.66666667vw] top-1/4 left-1/2 will-change-transform md:w-[41.66666667vw] lg:w-[29.16666667vw]">
-              <div className="overflow-hidden font-FivoSansModern max-w-[]">
+            <div id="draggable-img" className="absolute hover:scale-150 transform-gpu cursor-pointer w-[66.66666667vw] top-1/2 left-1/2 will-change-transform md:w-[41.66666667vw] lg:w-[29.16666667vw]">
+              <div className="overflow-hidden font-FivoSansModern">
+                <div id="topbar" className="flex items-stretch justify-between text-xs font-extrabold uppercase pointer-events-auto font-display bg-background dark:bg-background-dark text-tertiary dark:text-tertiary-dark hover:bg-tertiary dark:hover:bg-tertiary-dark  hover:text-background dark:hover:text-background-dark">
+                  <span className="block px-5 py-3 cursor-pointer font-extra-black">-</span>
+                  <span className="block w-full px-5 py-3 text-right select-none flex-grow-1 cursor-[grab] touch-none font-extra-black">work</span>
+                </div>
+                <div className="flex relative w-full bg-secondary pb-[110%] ">
+                  <div className="absolute inset-0">
+                    <Image src={Img1} className="min-h-full min-w-full max-w-full max-h-full object-cover" alt="person at work" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="draggable-img2" className="absolute hover:scale-150 transform-gpu cursor-pointer w-[66.66666667vw] top-1/2 left-1/2 will-change-transform md:w-[41.66666667vw] lg:w-[29.16666667vw]">
+              <div className="overflow-hidden font-FivoSansModern">
                 <div id="topbar" className="flex items-stretch justify-between text-xs font-extrabold uppercase pointer-events-auto font-display bg-background dark:bg-background-dark text-tertiary dark:text-tertiary-dark hover:bg-tertiary dark:hover:bg-tertiary-dark  hover:text-background dark:hover:text-background-dark">
                   <span className="block px-5 py-3 cursor-pointer font-extra-black">-</span>
                   <span className="block w-full px-5 py-3 text-right select-none flex-grow-1 cursor-[grab] touch-none font-extra-black">work</span>
