@@ -1,115 +1,111 @@
 import Dashicon from "public/icons/dashboard.svg";
-import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
+import { gsap, Draggable } from "src/services/gasp";
+import { onMove } from "src/services/animationEvents";
 import { useMedia, mediaQueries } from "src/hooks/useMediaQuery";
-import { Draggable, gsap } from "src/services/gasp";
-
-
-
+import ShowButton from "./showButton";
+import useHint from "src/hooks/useHint";
+import DashNavbar from "./dashNav";
+import DashOptions from "./dashOptions";
 
 export default function Dashboard({ setDarkTheme, darkMode }) {
   const [show, setShow] = useState(false);
+  const [clicked, setClicked] = useState(false);
+  const dragRef = useRef();
+  const { hintRef, setHintText } = useHint();
   const md = useMedia(mediaQueries.md);
+
 
   useEffect(() => {
     let ctx = gsap.context(() => {
 
       const onClick = () => {
-        gsap.to('#draggable-dashboard', { scale: 1.25, duration: 0 });
+        gsap.to(dragRef.current, { scale: 1.25, duration: 0 });
       };
       const onRelease = () => {
-        gsap.to('#draggable-dashboard', { scale: 1, duration: 0 });
+        gsap.to(dragRef.current, { scale: 1, duration: 0 });
       };
-
-      Draggable.create('#draggable-dashboard', {
-        bounds: "#main-wrapper",
-        trigger: '#tobButtonBar',
+      Draggable.create(dragRef.current, {
+        trigger: '#trigger-dash',
         onDragStart: onClick,
         onDragEnd: onRelease,
+        onDrag: onMove,
+        onPress: () => { setClicked(true) },
+        onRelease: () => { setClicked(false) }
+
       });
 
     }); // <- IMPORTANT! Scopes selector text
 
     return () => ctx.revert(); // cleanup
 
+
   }, []);
 
-  const btn = (() => {
-    if (md || !md && show) {
+  useEffect(() => {
+    setHintText(clicked ? 'now drag me' : 'grab me');
+  }, [clicked])
 
-      return <button
-        onClick={() => { setShow(!show) }}
-        className="flex justify-between font-FivoSansModern font-extra-black uppercase
-      items-center text-xs bg-background-dark dark:bg-background group-hover:bg-secondary dark:group-hover:bg-secondary-dark dark:group-hover:text-inverted"
-      >
-        <span id="tobButtonBar" className="w-full px-4 md:h-10 flex items-center">Dashboard</span>
-        <span className="w-10 h-10 items-center flex justify-center cursor-pointer">{show ? "-" : "+"}</span>
-      </button>
-    } else if (!md) {
-      return <button id="tobButtonBar" onClick={() => { setShow(!show) }}>
-        <Dashicon className="svg-dash" />
-      </button>
+
+  useEffect(() => {
+    if (hintRef && !md && !show) {
+      hintRef.current.style.display = 'none';
     }
-  })();
+  }, [show, md]);
+
+  const onEnter = () => {
+    setHintText(clicked ? 'now drag me' : 'grab me');
+    hintRef.current.style.display = 'inline';
+  }
+
+  const onLeave = () => {
+    hintRef.current.style.display = 'none';
+    setHintText('');
+  }
+
+
+
 
   return (
-    <div className="group absolute right-6 top-4 text-primary-dark dark:text-primary border border-red" id="draggable-dashboard">
-      {btn}
+    <div
+      ref={dragRef}
+      id="draggable-dashboard"
+      className="group absolute top-4 right-4 md:right-6 md:top-8 text-primary-dark dark:text-primary"
+    >
+      {
+        (md || !md && show) ? <>
+          <div
+            className="flex justify-between font-FivoSansModern font-extra-black uppercase
+            items-center text-xs bg-background-dark dark:bg-background group-hover:bg-secondary dark:group-hover:bg-secondary-dark dark:group-hover:text-inverted"
+          >
+            <div
+
+              id="trigger-dash"
+              className="w-full md:h-10 flex items-center"
+            >
+              <span
+                onMouseEnter={onEnter}
+                onMouseLeave={onLeave}
+                onMouseMove={onMove}
+                className="w-full h-full flex items-center px-4"
+              >
+                Dashboard
+              </span>
+            </div>
+            <ShowButton show={show} setShow={setShow} />
+          </div>
+        </> : <>
+          <button id="trigger-dash" onClick={() => { setShow(!show) }}>
+            <Dashicon className="svg-dash" />
+          </button>
+        </>
+      }
       <div className="relative">
         {
           show &&
           <div className={`absolute  border-2 border-primary dark:border-primary-dark w-full p-6 group-hover:border-secondary`}>
-            <nav>
-              <ul className="text-primary dark:text-primary-dark uppercase font-heavy">
-                <li>
-                  <Link href="/">
-                    <a className="inline-block w-full py-1 hover:pl-2">Home</a>
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/">
-                    <a className="inline-block w-full py-1 hover:pl-2">About</a>
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/">
-                    <a className="inline-block w-full py-1 hover:pl-2">Projects</a>
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/">
-                    <a className="inline-block w-full py-1 hover:pl-2">Blog</a>
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/">
-                    <a className="inline-block w-full py-1 hover:pl-2">Contact</a>
-                  </Link>
-                </li>
-              </ul>
-            </nav>
-            <div className="text-primary dark:text-primary-dark mt-4" >
-              <button
-                onClick={() => { setDarkTheme(false) }}
-                onTouchStart={() => { setDarkTheme(false) }}
-                className="flex items-center gap-2"
-              >
-                <span className="w-6 h-6 border rounded-full flex justify-center items-center">
-                  <span className={`w-3 h-3 rounded-full ${!darkMode && 'bg-tertiary dark:bg-tertiary-dark'}`}></span>
-                </span>
-                <span className="text-xs font-semibold">LIGHT</span>
-              </button>
-              <button
-                onClick={() => { setDarkTheme(true) }}
-                onTouchStart={() => { setDarkTheme(true) }}
-                className="flex items-center gap-2 mt-2"
-              >
-                <span className="w-6 h-6 border rounded-full flex justify-center items-center">
-                  <span className={`w-3 h-3 rounded-full ${darkMode && 'bg-tertiary dark:bg-tertiary-dark'}`}></span>
-                </span>
-                <span className="text-xs font-semibold">DARK</span>
-              </button>
-            </div>
+            <DashNavbar />
+            <DashOptions setDarkTheme={setDarkTheme} darkMode={darkMode} />
           </div>
         }
       </div>

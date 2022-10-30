@@ -23,7 +23,7 @@ export default function Test() {
 
   return (
     <Layout home="Keddib - Home">
-      <div className=''>
+      <div className='border border-red'>
         <About />
       </div>
       {/* <div className="relative border border-red">

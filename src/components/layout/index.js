@@ -1,20 +1,18 @@
 import { useEffect, useState } from 'react';
 import Head from 'next/head';
-import Dashboard from 'src/components/dashborad';
-import Logo from '../logo';
+import HintProvider from 'src/components/hint/HintProvider';
+import Header from 'src/components/header';
 
 export default function Layout({ children, home }) {
 
   const [darkMode, setDarkMode] = useState(false);
 
-
-  function setDarkTheme(value) {
-    setDarkMode(value);
-    localStorage.setItem('dark', value);
-  }
-
   useEffect(() => {
-    console.log()
+
+    function setDarkTheme(value) {
+      setDarkMode(value);
+      localStorage.setItem('dark', value);
+    }
     const dark = localStorage.getItem('dark');
     if (dark && dark == 'true') {
       setDarkTheme(true);
@@ -43,16 +41,15 @@ export default function Layout({ children, home }) {
         <title>{home}</title>
       </Head>
       <main id="main-wrapper" className="relative bg-background dark:bg-background-dark text-primary dark:text-primary-dark">
-        <header className='relative w-full z-10'>
-          <Logo />
-          <Dashboard setDarkTheme={setDarkTheme} darkMode={darkMode} />
-        </header>
-        {children}
-        <footer className='border border-pink-600 flex justify-around'>
-          <div className='bg-gray-600'>signture</div>
-          <div className='bg-gray-600'>linkedin</div>
-          <div className='bg-gray-600'>github</div>
-        </footer>
+        <HintProvider>
+          <Header setDarkTheme={setDarkMode} darkMode={darkMode} />
+          {children}
+          <footer className='border border-pink-600 flex justify-around'>
+            <div className='bg-gray-600'>signture</div>
+            <div className='bg-gray-600'>linkedin</div>
+            <div className='bg-gray-600'>github</div>
+          </footer>
+        </HintProvider>
       </main>
     </div>
   );
