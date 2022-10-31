@@ -5,6 +5,7 @@ import { Draggable } from "gsap/dist/Draggable";
 
 // configure/register once we're running in the browser
 if (typeof window !== "undefined") {
+  Draggable.zIndex = 500;
   gsap.registerPlugin(Draggable);
 
   // gsap.defaults({

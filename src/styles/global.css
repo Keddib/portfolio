@@ -90,10 +90,19 @@
     padding-bottom: 8.33333333vw;
   }
 
+  .heading--1 {
+    font-size: 3rem;
+    line-height: 1;
+  }
+
   @media (min-width: 800px) {
     .section--default {
       padding-top: 4.16666667vw;
       padding-bottom: 4.16666667vw;
+    }
+    .heading--1 {
+      font-size: 7.75rem;
+      line-height: .91;
     }
   }
 
@@ -129,9 +138,33 @@
   .logo-svg {
     fill-rule: evenodd;
   }
+  .draggable-position {
+    transform: translate(-60%, -70%);
+  }
+  .draggable-position2 {
+    transform-origin: 50% 0%;
+    transform: translate(-40%, -30%);
+  }
+  #hintspan {
+    transform-origin: 50% 50%;
+  }
+   #main-word {
+    z-index: 10;
+  }
+  #main-word::before {
+    display: inline-block;
+    position: absolute;
+    top: -8%;
+    left: -2%;
+    content: "";
+    background-color: red;
+    width: 105%;
+    height: 100%;
+    opacity: 0.5;
+    z-index: -10;
+  }
 }
 
 @layer components {
-
 
 }

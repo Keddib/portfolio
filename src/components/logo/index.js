@@ -1,6 +1,6 @@
 import Logos from "public/icons/logo.svg";
 import { Draggable, gsap } from "src/services/gasp";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import useHint from "src/hooks/useHint";
 import { onMove } from "src/services/animationEvents";
 
@@ -42,7 +42,7 @@ export default function Logo() {
 
   useEffect(() => {
     setHintText(isDraging ? 'now drag me' : 'grab me');
-  }, [isDraging])
+  }, [isDraging]);
 
   useEffect(() => {
 
