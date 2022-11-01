@@ -15,21 +15,19 @@ export default function About() {
           <div className='flex flex-col justify-end  items-start  col-start-3 col-end-22 lg:col-end-10  '>
             <Number>01</Number>
             <Title2>
-              About DASH
+              About ME
             </Title2>
             <p className="paragraph">
-              We're aiming to change the way the world works.
-              By creating exciting tech that revolutionizes job boards.
-              Reshapes temporary staffing. Rethinks recruitment. By challenging business as usual.
+              I’m a software engineer specializing in building (and occasionally designing) exceptional digital experiences.
+              Currently, I’m focused on building accessible , user friendly web applications.
             </p>
             <Title3>
-              So why DASH
+              So why
             </Title3>
             <p className="paragraph">
-              Everyone everywhere deserves quick and hassle-free access to the many
-              jobs that make the world go around.
+              I enjoy creating things that live on the internet.
             </p>
-            <Button>Check out work</Button>
+            <Button>check my Resume</Button>
           </div>
 
           <div className='col-start-1 col-end-25 lg:col-start-10 '>

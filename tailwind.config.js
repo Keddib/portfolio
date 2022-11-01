@@ -44,6 +44,7 @@ module.exports = {
       },
       transformOrigin: {
         '50': '50% 0%',
+        'center': '50% 50%'
       }
     },
     colors: {

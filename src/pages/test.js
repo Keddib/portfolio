@@ -1,6 +1,7 @@
 import About from "src/components/about";
 import Layout from "src/components/layout";
-import Title from "src/components/Title";
+import Intro from "src/components/intro";
+import Skills from "src/components/skills";
 
 
 
@@ -9,8 +10,9 @@ export default function Test() {
   return (
     <Layout home="Keddib - Home">
       <div className='border'>
-        <Title />
+        <Intro />
         <About />
+        <Skills />
       </div>
     </Layout>
   );
