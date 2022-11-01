@@ -148,20 +148,8 @@
   #hintspan {
     transform-origin: 50% 50%;
   }
-   #main-word {
-    z-index: 10;
-  }
-  #main-word::before {
-    display: inline-block;
-    position: absolute;
-    top: -8%;
-    left: -2%;
-    content: "";
-    background-color: red;
-    width: 105%;
-    height: 100%;
-    opacity: 0.5;
-    z-index: -10;
+  .asterisk {
+    transform-origin: 50% 50%;
   }
 }
 

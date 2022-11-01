@@ -1,4 +1,4 @@
-import Dashicon from "public/icons/dashboard.svg";
+import Menu from "public/icons/menu.svg";
 import { useEffect, useRef, useState } from "react";
 import { gsap, Draggable } from "src/services/gasp";
 import { onMove } from "src/services/animationEvents";
@@ -11,7 +11,8 @@ import DashOptions from "./dashOptions";
 export default function Dashboard({ setDarkTheme, darkMode }) {
   const [show, setShow] = useState(false);
   const [clicked, setClicked] = useState(false);
-  const dragRef = useRef();
+  const dragRef = useRef(null);
+  const triggerRef = useRef(null);
   const { hintRef, setHintText } = useHint();
   const md = useMedia(mediaQueries.md);
 
@@ -26,7 +27,7 @@ export default function Dashboard({ setDarkTheme, darkMode }) {
         gsap.to(dragRef.current, { scale: 1, duration: 0 });
       };
       Draggable.create(dragRef.current, {
-        trigger: '#trigger-dash',
+        trigger: triggerRef.current,
         onDragStart: onClick,
         onDragEnd: onRelease,
         onDrag: onMove,
@@ -40,7 +41,7 @@ export default function Dashboard({ setDarkTheme, darkMode }) {
     return () => ctx.revert(); // cleanup
 
 
-  }, []);
+  }, [triggerRef.current]);
 
   useEffect(() => {
     setHintText(clicked ? 'now drag me' : 'grab me');
@@ -80,7 +81,7 @@ export default function Dashboard({ setDarkTheme, darkMode }) {
           >
             <div
 
-              id="trigger-dash"
+              ref={triggerRef}
               className="w-full md:h-10 flex items-center"
             >
               <span
@@ -95,8 +96,10 @@ export default function Dashboard({ setDarkTheme, darkMode }) {
             <ShowButton show={show} setShow={setShow} />
           </div>
         </> : <>
-          <button id="trigger-dash" onClick={() => { setShow(!show) }}>
-            <Dashicon className="svg-dash" />
+          <button ref={triggerRef} onClick={() => { setShow(!show) }} className="border border-black">
+            <div className="border border-primary dark:border-primary-dark h-10 p-2">
+              <Menu className="w-full h-full fill-primary dark:fill-primary-dark" />
+            </div>
           </button>
         </>
       }
