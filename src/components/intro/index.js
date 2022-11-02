@@ -1,7 +1,7 @@
-import Asterisk from "public/icons/asterisk.svg";
 import { useEffect, useRef } from "react";
 import { gsap, Linear } from "src/services/gasp";
 import Number from "src/components/number";
+import Asterisk from "src/components/asterisk";
 
 export default function Intro() {
 
@@ -69,25 +69,25 @@ export default function Intro() {
                   <div className="overflow-hidden">
                     <span className="relative block text-background dark:text-background-dark">khalid</span>
                   </div>
-                  <div ref={asteriskRef} className="asterisk absolute flex items-center justify-center rounded-full cursor-pointer bg-background dark:bg-background-dark -top-6 -right-6 md:-top-12 md:-right-12 w-7 h-7 md:w-12 md:h-12">
-                    <div className="w-3 h-3 md:w-6 md:h-6 text-tertiary dark:text-tertiary-dark text-center">
-                      <Asterisk />
-                    </div>
-                  </div>
+                  <Asterisk elmRef={asteriskRef} />
                 </div>
                 <h1 ref={titleRef} className="relative z-10">
-                  <div className="text-left overflow-hidden">
+                  <div className="text-left overflow-hidden inline-block">
                     <span className="inline-block">
-                      <div className="inline-block mr-6 md:mr-10">khalid ,</div>
+                      <div className="inline-block mr-4 md:mr-10">khalid ,</div>
                     </span>
-                    <div className="inline-block">The</div>
                   </div>
-                  <div className="text-left overflow-hidden">
-                    <div className="inline-block mr-6 md:mr-10">Web is</div>
-                    <div className="inline-block">what</div>
+                  <div className="text-left overflow-hidden inline-block">
+                    <div className="inline-block mr-4 md:mr-10">The</div>
+                  </div> <br />
+                  <div className="text-left overflow-hidden inline-block">
+                    <div className="inline-block mr-4 md:mr-10">web is</div>
                   </div>
+                  <div className="text-left overflow-hidden inline-block">
+                    <div className="inline-block">my</div>
+                  </div> <br />
                   <div className="text-left overflow-hidden">
-                    <div className="inline-block">I breath</div>
+                    <div className="inline-block">arena</div>
                   </div>
                 </h1>
               </div>
