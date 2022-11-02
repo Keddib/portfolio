@@ -24,19 +24,19 @@ export default function Intro() {
       });
 
       animations.forEach((anim) => {
-        tl.current.add(anim);
+        tl.current.add(anim, "<70%");
       });
 
       animations = words.map(child => {
         return gsap.from(child.children, { duration: 0.5, yPercent: 100 });
       });
       animations.forEach((anim) => {
-        tl.current.add(anim);
+        tl.current.add(anim, "<70%");
       })
 
-      tl.current.from(mainRef.current, { duration: 0.5, yPercent: -100, scaleY: 0, display: 'none' });
-      tl.current.to(mainRef.current, { duration: 0.5, rotate: '-2deg', });
-      tl.current.from(asteriskRef.current, { duration: 0.5, scale: 0 });
+      tl.current.from(mainRef.current, { duration: 0.5, yPercent: -100, scale: 0, display: 'none' }, "<70%");
+      tl.current.to(mainRef.current, { duration: 0.5, rotate: '-2deg', }, "<70%");
+      tl.current.from(asteriskRef.current, { duration: 0.5, scale: 0 },);
       tl.current.to(asteriskRef.current, { duration: 2, rotation: "360", ease: Linear.easeInOut, repeat: -1 });
 
 
@@ -84,10 +84,10 @@ export default function Intro() {
                   </div>
                   <div className="text-left overflow-hidden">
                     <div className="inline-block mr-6 md:mr-10">Web is</div>
-                    <div className="inline-block">my</div>
+                    <div className="inline-block">what</div>
                   </div>
                   <div className="text-left overflow-hidden">
-                    <div className="inline-block">keyword</div>
+                    <div className="inline-block">I breath</div>
                   </div>
                 </h1>
               </div>
