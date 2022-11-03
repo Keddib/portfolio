@@ -9,11 +9,9 @@ export default function Home() {
 
   return (
     <Layout home="Keddib - Home">
-      <div >
-        <Intro />
-        <About />
-        <Skills />
-      </div>
+      <Intro />
+      <About />
+      <Skills />
     </Layout>
   );
 }

@@ -51,10 +51,12 @@ export default function Layout({ children, home }) {
         <meta name="theme-color" content="#ffffff" />
         <title>{home}</title>
       </Head>
-      <main id="main-wrapper" className="relative bg-background dark:bg-background-dark text-primary dark:text-primary-dark">
+      <main id="main-wrapper" className="relative flex flex-col h-screen bg-background dark:bg-background-dark text-primary dark:text-primary-dark">
         <HintProvider>
           <Header setDarkTheme={setDarkMode} darkMode={darkMode} />
-          {children}
+          <div className="grow">
+            {children}
+          </div>
           <Footer />
         </HintProvider>
       </main>
