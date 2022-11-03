@@ -106,7 +106,7 @@ export default function Dashboard({ setDarkTheme, darkMode }) {
       <div className="relative">
         {
           show &&
-          <div className={`absolute  border-2 border-primary dark:border-primary-dark w-full p-6 group-hover:border-secondary`}>
+          <div className="absolute  border-2 border-primary dark:border-primary-dark w-full p-6 group-hover:border-secondary">
             <DashNavbar />
             <DashOptions setDarkTheme={setDarkTheme} darkMode={darkMode} />
           </div>

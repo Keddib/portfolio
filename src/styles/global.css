@@ -94,7 +94,16 @@
     line-height: 1;
   }
 
+    .heading--4 {
+      font-size: 1.5rem;
+      line-height: 1;
+    }
+
   @media (min-width: 800px) {
+    .heading--4 {
+      font-size: 2.5rem;
+      text-transform: none;
+    }
     .section--default {
       padding-top: 4.16666667vw;
       padding-bottom: 4.16666667vw;
@@ -148,6 +157,15 @@
   }
   .asterisk {
     transform-origin: 50% 50%;
+  }
+  .text--highlighted::after {
+    content: "";
+    position: absolute;
+    width: 110%;
+    height: 100%;
+    top: 4px;
+    left: -6px;
+    z-index: -10;
   }
 }
 

@@ -32,8 +32,8 @@ export default function About() {
 
           <div className='col-start-1 col-end-25 lg:col-start-10 '>
             <div className="relative w-full pb-[150%] md:pb-[80%] ">
-              <ImageDrag img={Img1} className={'draggable-position'} name="work" />
-              <ImageDrag img={Img1} className={'draggable-position2'} name="work" />
+              <ImageDrag img={Img1} className='draggable-position' name="work" />
+              <ImageDrag img={Img1} className='draggable-position2' name="work" />
 
             </div>
           </div>

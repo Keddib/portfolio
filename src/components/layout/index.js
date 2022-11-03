@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import Head from 'next/head';
 import HintProvider from 'src/components/hint/HintProvider';
 import Header from 'src/components/header';
+import Footer from '../footer';
 
 export default function Layout({ children, home }) {
 
@@ -21,8 +22,18 @@ export default function Layout({ children, home }) {
     }
   }, []);
 
+
+  useEffect(() => {
+    const htmlElem = document.documentElement;
+    if (darkMode) {
+      htmlElem.classList.add('dark');
+    } else {
+      htmlElem.classList.remove('dark');
+    }
+  }, [darkMode])
+
   return (
-    <div className={`font-BeVietnam ${darkMode && 'dark'}`}>
+    <div>
       <Head>
         <meta
           name="description"
@@ -44,11 +55,7 @@ export default function Layout({ children, home }) {
         <HintProvider>
           <Header setDarkTheme={setDarkMode} darkMode={darkMode} />
           {children}
-          <footer className='border border-pink-600 flex justify-around'>
-            <div className='bg-gray-600'>signture</div>
-            <div className='bg-gray-600'>linkedin</div>
-            <div className='bg-gray-600'>github</div>
-          </footer>
+          <Footer />
         </HintProvider>
       </main>
     </div>
