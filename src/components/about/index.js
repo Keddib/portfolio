@@ -4,15 +4,18 @@ import Number from "src/components/number";
 import Title2 from "src/components/title2";
 import Title3 from "src/components/title3";
 import ImageDrag from "src/components/imagedrag";
+import useAnimationOnScroll from "src/hooks/useOnScroll";
 
 export default function About() {
+
+  useAnimationOnScroll("#about__text");
 
   return (
     <>
       <section className='section--default'>
         <div className='grid grid-cols-24'>
 
-          <div className='flex flex-col justify-end  items-start  col-start-3 col-end-22 lg:col-end-10  '>
+          <div id="about__text" className=' relative flex flex-col justify-end  items-start  col-start-3 col-end-22 lg:col-end-10  '>
             <Number>01</Number>
             <Title2>
               About ME

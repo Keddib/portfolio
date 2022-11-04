@@ -10,10 +10,10 @@ export default function Button({ children }) {
           <div className="absolute inset-0 flex items-center z-20 bg-tertiary dark:bg-tertiary-dark text-background dark:text-background-dark">
             <div className="flex w-screen overflow-hidden flex-nowrap marquee">
               <div className="flex items-center shrink-0 z-10 js-marquee-text px-5 py-4">
-                <span className="marquee__text">{children}</span>
+                <span className="">{children}</span>
               </div>
               <div className="flex items-center shrink-0 z-10 js-marquee-text px-5 py-4">
-                <span className="marquee__text">{children}</span>
+                <span className="">{children}</span>
               </div>
             </div>
           </div>

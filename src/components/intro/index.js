@@ -9,35 +9,34 @@ export default function Intro() {
   const titleRef = useRef(null);
   const mainRef = useRef(null);
   const asteriskRef = useRef(null);
-  const tl = useRef(null);
 
   useEffect(() => {
     let ctx = gsap.context(() => {
 
-      tl.current = gsap.timeline();
+      const tl = gsap.timeline();
 
       const elems = [...miniRef.current.children];
       const words = [...titleRef.current.children];
 
       let animations = elems.map(child => {
-        return gsap.from(child, { duration: 0.5, yPercent: 100 });
+        return gsap.from(child, { duration: 0.4, yPercent: 100 });
       });
 
       animations.forEach((anim) => {
-        tl.current.add(anim, "<70%");
+        tl.add(anim, "<30%");
       });
 
       animations = words.map(child => {
-        return gsap.from(child.children, { duration: 0.5, yPercent: 100 });
+        return gsap.from(child.children, { duration: 0.4, yPercent: 100 });
       });
       animations.forEach((anim) => {
-        tl.current.add(anim, "<70%");
+        tl.add(anim, "<30%");
       })
 
-      tl.current.from(mainRef.current, { duration: 0.5, yPercent: -100, scale: 0, display: 'none' }, "<70%");
-      tl.current.to(mainRef.current, { duration: 0.5, rotate: '-2deg', }, "<70%");
-      tl.current.from(asteriskRef.current, { duration: 0.5, scale: 0 },);
-      tl.current.to(asteriskRef.current, { duration: 2, rotation: "360", ease: Linear.easeInOut, repeat: -1 });
+      tl.from(mainRef.current, { duration: 0.4, yPercent: 10, scaleY: 0, display: 'none' }, "<30%");
+      tl.to(mainRef.current, { duration: 0.4, rotate: '-2deg', }, "<30%");
+      tl.from(asteriskRef.current, { duration: 0.4, scale: 0 },);
+      tl.to(asteriskRef.current, { duration: 2, rotation: "360", ease: Linear.easeInOut, repeat: -1 });
 
 
 

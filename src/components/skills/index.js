@@ -1,27 +1,19 @@
-import { useEffect } from "react";
-import { gsap } from "src/services/gasp";
+import TechsBack from "public/icons/techs_back.svg";
+import TechsFront from "public/icons/techs_front.svg";
 import Number from "src/components/number";
-import Title2 from "src/components/title2";
-import Title4 from "../title4";
+import Title4 from "src/components/title4";
+import useAnimationOnScroll from "src/hooks/useOnScroll";
+import MovingText from "../moving_text";
 
 export default function Skills() {
 
-
-  useEffect(() => {
-    let ctx = gsap.context(() => {
-
-    }); // <- IMPORTANT! Scopes selector text
-
-    return () => {  // cleanup
-      ctx.revert();
-    }
-  }, [])
+  useAnimationOnScroll('#skills__text')
 
   return (
     <section className="section--default">
       <div className="grid grid-cols-24 gap-x-2.5">
         <div className="col-start-3 col-end-25 md:col-start-3 md:col-end-23">
-          <div className="flex flex-col md:flex-row gap-4">
+          <div id="skills__text" className=" relative flex flex-col md:flex-row gap-4">
             <div className="md:w-1/3">
               <Number>02</Number>
               <Title4>
@@ -46,9 +38,23 @@ export default function Skills() {
             </div>
           </div>
         </div>
-        <div className="col-start-3 col-end-25 md:col-end-23 border mt-8 md:mt-10 lg:mt-12">
-          <div className="">
+      </div>
+      <div className="section--default ">
+        <div className="relative flex justify-end w-full overflow-hidden">
+          <div className="relative flex flex-col items-stretch h-auto w-[66.66666667vw] md:w-[58.33333333vw]">
+            <span className="block overflow-hidden bg-none relative">
+              <span className="pt-[69.9873896595208%] block bg-none"></span>
+              <TechsBack className="absolute top-0 left-0 right-0 bottom-0 max-w-full min-w-full max-h-full min-h-full object-fill" />
+            </span>
+          </div>
 
+          <MovingText> react js. node js. c++. docker. javascript. html. css.</MovingText>
+
+          <div className="absolute flex flex-col items-stretch top-0 right-0 z-20 h-full w-[66.66666667vw] md:w-[58.33333333vw]  ">
+            <span className="block overflow-hidden bg-none relative w-full h-full ">
+              <span className="pt-[69.9873896595208%] block bg-none "></span>
+              <TechsFront className="absolute top-0 left-0 right-0 bottom-0 max-w-full min-w-full max-h-full min-h-full object-fill" />
+            </span>
           </div>
         </div>
       </div>
