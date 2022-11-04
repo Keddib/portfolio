@@ -1,18 +1,58 @@
 import Link from "next/link";
+import { useRef, useEffect } from "react";
+import { gsap } from "src/services/gasp";
 
 export default function Button({ children }) {
+
+  const textRef = useRef(null);
+  const tl = useRef(null);
+
+  function onEnter() {
+    tl.current.play();
+  }
+  function onLeave() {
+    tl.current.pause();
+  }
+
+
+  useEffect(() => {
+
+    const cxt = gsap.context(() => {
+
+      tl.current = gsap.timeline({ repeat: -1, paused: true });
+      tl.current.fromTo(textRef.current.children, {
+        translate: "0% 0%",
+        duration: 1.5,
+        ease: 'none',
+      },
+        {
+          translate: "-100% 0%",
+          duration: 1.5,
+          ease: 'none',
+        }
+      );
+    });
+
+    return () => {
+      cxt.revert();
+    }
+  }, []);
+
   return (
 
-    <div className="stagger-child js-reveal-child">
+    <div className="">
       <Link href="/">
-        <a className="mt-[8.333333vw] md:mt-[4.16666667] inline-flex relative px-5 py-4 text-xs font-black uppercase font-display bg-tertiary dark:bg-tertiary-dark md:text-sm">
+        <a
+          onMouseEnter={onEnter}
+          onMouseLeave={onLeave}
+          className="mt-[8.333333vw] md:mt-[4.16666667] inline-flex relative px-5 py-4 text-xs font-black uppercase font-display bg-tertiary dark:bg-tertiary-dark md:text-sm">
           <span className="relative z-10 text-background dark:text-background-dark">{children}</span>
           <div className="absolute inset-0 flex items-center z-20 bg-tertiary dark:bg-tertiary-dark text-background dark:text-background-dark">
-            <div className="flex w-screen overflow-hidden flex-nowrap marquee">
-              <div className="flex items-center shrink-0 z-10 js-marquee-text px-5 py-4">
+            <div ref={textRef} className="flex w-screen overflow-hidden flex-nowrap marquee">
+              <div className="flex items-center shrink-0 z-10 px-5 py-4">
                 <span className="">{children}</span>
               </div>
-              <div className="flex items-center shrink-0 z-10 js-marquee-text px-5 py-4">
+              <div className="flex items-center shrink-0 z-10 px-5 py-4">
                 <span className="">{children}</span>
               </div>
             </div>

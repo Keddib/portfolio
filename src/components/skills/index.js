@@ -3,7 +3,7 @@ import TechsFront from "public/icons/techs_front.svg";
 import Number from "src/components/number";
 import Title4 from "src/components/title4";
 import useAnimationOnScroll from "src/hooks/useOnScroll";
-import MovingText from "../moving_text";
+import MovingText from "src/components/moving_text";
 
 export default function Skills() {
 
@@ -40,7 +40,7 @@ export default function Skills() {
         </div>
       </div>
       <div className="section--default ">
-        <div className="relative flex justify-end w-full overflow-hidden">
+        <div className="relative flex justify-end w-full overflow-hidden ">
           <div className="relative flex flex-col items-stretch h-auto w-[66.66666667vw] md:w-[58.33333333vw]">
             <span className="block overflow-hidden bg-none relative">
               <span className="pt-[69.9873896595208%] block bg-none"></span>

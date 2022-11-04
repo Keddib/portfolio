@@ -1,6 +1,6 @@
+import Logo from "public/icons/logo.svg";
 import { useEffect, useRef } from "react";
 import { gsap } from "src/services/gasp";
-import Logo from "src/components/logo";
 
 
 export default function Footer() {
@@ -87,13 +87,13 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className="pt-10 pb-10 border-t border-solid border-primary dark:border-primary-dark grid grid-cols-24 gap-x-2.5 mt-[16.66666667vw] md:mt-[8.33333333vw]">
+      <div className="border-t border-solid border-primary dark:border-primary-dark grid grid-cols-24 gap-x-2.5 mt-[16.66666667vw] md:mt-[8.33333333vw]">
         <div className="col-start-3 md:col-start-2 col-end-23">
-          <div className="flex flex-col justify-between md:flex-row">
+          <div className="flex flex-col items-center justify-between md:flex-row">
             <p className="font-medium uppercase text-xxs">© Keddib, 2022</p>
-            <div className="flex pt-1 md:pt-0">
-              <div className="relative -top-12 boredr border-primary-dark">
-                <Logo />
+            <div>
+              <div className="pointer-events-none w-12 my-2">
+                <Logo className="w-full h-full fill-primary dark:fill-primary-dark logo-svg" />
               </div>
             </div>
           </div>
