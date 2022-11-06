@@ -2,6 +2,8 @@
 
 // max images is 4. if we add one we need to add styling for it
 
+import Image from "next/image";
+
 export default function StackedImages({ images }) {
 
   function hundleStartClick(e) {
@@ -23,10 +25,15 @@ export default function StackedImages({ images }) {
       {
         images.map((img, index) => {
           return (
-            <div key={index * 1000} onClick={hundleImageClick} className="absolute h-full cursor-pointer w-[80%] top-1/2 left-1/2 stacked-image">
-              <div className="relative w-full h-full bg-secondary">
-                <div className="absolute inset-0">
-                  <span>{`img${index}`}</span>
+            <div key={index} onClick={hundleImageClick} className="absolute h-full cursor-pointer w-[80%] top-1/2 left-1/2 stacked-image">
+              <div className="relative w-full h-full bg-secondary overflow-hidden">
+                <div className="absolute inset-0 w-full h-full">
+                  <Image
+                    src={img}
+                    alt="me at work"
+                    fill
+                    placeholder="blur" // Optional blur-up while loading
+                  />
                 </div>
               </div>
             </div>

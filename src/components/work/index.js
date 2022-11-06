@@ -1,3 +1,6 @@
+import image1 from "public/images/10.webp"
+import image2 from "public/images/11.webp"
+import image3 from "public/images/12.webp"
 import Button from "src/components/button";
 import StackedImages from "src/components/stacked_images";
 
@@ -18,7 +21,7 @@ export default function Work() {
                     I AM A FRESH NEW DEVELOPER WITH BOLD IDEAS AND BIG AMBITIONS.
                     <span className="inline-block relative px-3 text-white ">
                       EAGER
-                      <span className="inline-block absolute top-[10%] left-0 bg-secondary w-full h-[90%] -z-10"></span>
+                      <span className="inline-block absolute top-[10%] left-0 bg-secondary w-full h-full -rotate-1 -z-10"></span>
                     </span>
                     TO EXPERIMENT. WILLING TO F*CK UP. READY TO MAKE THE NEXT GREAT APP
                   </span>
@@ -31,7 +34,7 @@ export default function Work() {
           </div>
         </div>
         <div className="relative z-10 w-full h-full pb-[100%] md:pb-0 md:absolute col-start-2 col-end-24 md:col-start-12 lg:col-start-14">
-          <StackedImages images={[1, 2, 3]} />
+          <StackedImages images={[image3, image2, image1]} />
         </div>
       </div>
     </section>
