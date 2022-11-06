@@ -6,10 +6,11 @@
     "start": "next start"
   },
   "dependencies": {
+    "eslint-config-next": "^13.0.2",
     "gsap": "^3.11.3",
-    "next": "latest",
-    "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "next": "^13.0.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@svgr/webpack": "^6.4.0",
