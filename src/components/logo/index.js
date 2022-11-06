@@ -22,7 +22,7 @@ export default function Logo() {
       hintRef.current.style.display = 'inline';
     }
     const svgEl = currentTarget.getElementsByTagName('svg');
-    const colorIndex = 0;
+    let colorIndex = 0;
     const it = setInterval(() => {
       colorIndex = (colorIndex + 1) % 3;
       gsap.to(svgEl, { duration: 0, fill: colors[colorIndex] });

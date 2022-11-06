@@ -10,13 +10,13 @@ export default function useAnimationOnScroll(id) {
       // animate text on scroll
 
       gsap.from(id, {
-        delay: 0.2,
+        delay: 0.1,
         opacity: 0,
         top: '30%',
         duration: 1,
         scrollTrigger: {
           trigger: id,
-          start: "30% bottom",
+          start: "50% bottom",
         }
       });
 

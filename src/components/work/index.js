@@ -14,11 +14,11 @@ export default function Work() {
               <div className="inline">
                 <div className="inline-flex items-center tagline transform -translate-y-2">
                   <span className="inline-block text-sm font-bold uppercase md:text-lg text-secondary font-display">what i build</span>
-                  <span className="inline-block mx-4 rounded-full shrink-0 md:mx-8 bg-secondary w-3.5 h-3.5 md:w-7 md:h-7 transform -translate-y-0.5"></span>
+                  <span className="inline-block mx-4 rounded-full shrink-0 md:mx-8 bg-secondary w-3.5 h-3.5 md:w-7 md:h-7"></span>
                 </div>
                 <div className="inline uppercase ">
                   <span className="heading heading--3 work--heading font-bold">
-                    I AM A FRESH NEW DEVELOPER WITH BOLD IDEAS AND BIG AMBITIONS.
+                    I AM A WEB DEVELOPER WITH  BOLD IDEAS AND BIG AMBITIONS.
                     <span className="inline-block relative px-3 text-white ">
                       EAGER
                       <span className="inline-block absolute top-[10%] left-0 bg-secondary w-full h-full -rotate-1 -z-10"></span>

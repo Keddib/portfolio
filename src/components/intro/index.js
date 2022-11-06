@@ -35,8 +35,8 @@ export default function Intro() {
 
       tl.from(mainRef.current, { duration: 0.4, yPercent: 10, scaleY: 0, display: 'none' }, "<30%");
       tl.to(mainRef.current, { duration: 0.4, rotate: '-2deg', }, "<30%");
-      tl.from(asteriskRef.current, { duration: 0.4, scale: 0 },);
-      tl.to(asteriskRef.current, { duration: 2, rotation: "360", ease: Linear.easeInOut, repeat: -1 });
+      tl.from(asteriskRef.current, { duration: 0.5, scale: 0, rotation: "-360" },);
+      tl.to(asteriskRef.current, { duration: 2, rotation: "360", ease: Linear.easeOut, repeat: -1 });
 
 
 

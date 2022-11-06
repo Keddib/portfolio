@@ -42,7 +42,7 @@ export default function Button({ children }) {
 
     <div className="">
       <Link href="/">
-        <a
+        <div
           onMouseEnter={onEnter}
           onMouseLeave={onLeave}
           className="mt-[8.333333vw] md:mt-[4.16666667] inline-flex relative px-5 py-4 text-xs font-black uppercase font-display bg-tertiary dark:bg-tertiary-dark md:text-sm">
@@ -57,7 +57,7 @@ export default function Button({ children }) {
               </div>
             </div>
           </div>
-        </a>
+        </div>
       </Link>
     </div>
 
