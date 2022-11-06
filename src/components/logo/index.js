@@ -3,6 +3,7 @@ import { Draggable, gsap } from "src/services/gasp";
 import { useEffect, useState } from "react";
 import useHint from "src/hooks/useHint";
 import { onMove } from "src/services/animationEvents";
+import { useRouter } from "next/router";
 
 
 
@@ -13,6 +14,7 @@ export default function Logo() {
   const [interval, setInt] = useState(null);
   const [isDraging, setIsDraging] = useState(false);
   const { hintRef, setHintText } = useHint();
+  const router = useRouter();
 
   const onEnter = ({ currentTarget }) => {
     setHintText(isDraging ? 'now drag me' : 'grab me');
@@ -64,6 +66,7 @@ export default function Logo() {
       };
 
       Draggable.create('#draggable-logo', {
+        onClick: () => { router.push("/") },
         onDragStart: onClick,
         onDragEnd: onRelease,
         onPress: onClick,

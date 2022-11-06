@@ -9,6 +9,7 @@ export default function ImageDrag({ img, className, name }) {
   const [isDraging, setIsDraging] = useState(false);
   const triggerRef = useRef(null);
   const draggableRef = useRef(null);
+  const imageConver = useRef(null);
   const { setHintText, hintRef } = useHint();
 
 
@@ -36,6 +37,15 @@ export default function ImageDrag({ img, className, name }) {
 
       // all our animations can use selector text like ".box"
       // and it's properly scoped to our component
+
+      gsap.to(imageConver.current, {
+        scaleY: 0,
+        duration: 1,
+        scrollTrigger: {
+          trigger: draggableRef.current,
+          start: "50% bottom"
+        }
+      });
 
       const onClick = () => {
         setIsDraging(true);
@@ -79,6 +89,7 @@ export default function ImageDrag({ img, className, name }) {
         <div className="flex relative w-full bg-secondary pb-[110%] ">
           <div className="absolute inset-0">
             <Image src={img} className="min-h-full min-w-full max-w-full max-h-full object-cover" alt="personal image" />
+            <div ref={imageConver} className="absolute top-0 left-0 w-full h-full bg-secondary"></div>
           </div>
         </div>
       </div>

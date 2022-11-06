@@ -46,7 +46,7 @@ export default function Custom404() {
   }, []);
 
   return (
-    <Layout>
+    <Layout home="Keddib - 404">
       <section className="relative my-32 section--default pt-[16.66666667vw] md:mt-[12.5vw] md:pt-[4.16666667vw]">
         <div className="grid grid-cols-24 gap-x-2.5 ">
           <div className="col-start-3 col-end-23 ">

@@ -10,6 +10,15 @@ export default function MovingText({ children }) {
 
     const cxt = gsap.context(() => {
 
+      gsap.from("#moving__text__wrapper", {
+        top: "50%",
+        duration: 2,
+        scrollTrigger: {
+          trigger: textRef.current,
+          start: "30% bottom",
+        }
+      });
+
       const tl = gsap.timeline({ repeat: -1 });
       tl.fromTo(textRef.current.children, {
         translate: "0% 0%",
@@ -30,7 +39,7 @@ export default function MovingText({ children }) {
   }, []);
 
   return (
-    <div className="inline-flex absolute top-[21%] heading uppercase w-full text-[4rem] md:text-[6rem] lg:text-[9.75rem]">
+    <div id="moving__text__wrapper" className="inline-flex absolute top-[21%] heading uppercase w-full text-[4rem] md:text-[6rem] lg:text-[9.75rem]">
       <div className="absolute inset-0 flex items-center z-20">
         <div ref={textRef} className="flex w-screen overflow-hidden flex-nowrap marquee">
           <div className="flex items-center shrink-0 z-10 px-10">

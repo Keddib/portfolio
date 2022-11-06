@@ -71,7 +71,7 @@ export default function Dashboard({ setDarkTheme, darkMode }) {
     <div
       ref={dragRef}
       id="draggable-dashboard"
-      className="group absolute top-4 right-4 md:right-6 md:top-8 text-primary-dark dark:text-primary"
+      className="group absolute top-4 right-6 md:top-8 text-primary-dark dark:text-primary"
     >
       {
         (md || !md && show) ? <>
@@ -96,8 +96,8 @@ export default function Dashboard({ setDarkTheme, darkMode }) {
             <ShowButton show={show} setShow={setShow} />
           </div>
         </> : <>
-          <button ref={triggerRef} onClick={() => { setShow(!show) }} className="border border-black">
-            <div className="border border-primary dark:border-primary-dark h-10 p-2">
+          <button ref={triggerRef} onClick={() => { setShow(!show) }}>
+            <div className="border border-primary dark:border-primary-dark h-10 w-10 p-2">
               <Menu className="w-full h-full fill-primary dark:fill-primary-dark" />
             </div>
           </button>

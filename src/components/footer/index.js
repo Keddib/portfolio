@@ -36,7 +36,7 @@ export default function Footer() {
 
 
   return (
-    <footer className="relative pt-4/24">
+    <footer className="relative pt-[16.66666667vw]">
       <div ref={elemRef} className="items-end grid grid-cols-24 gap-x-2.5">
         <div className="hidden col-start-3 lg:block col-end-14 md:col-end-10 lg:col-end-8 relative">
           <div className="flex flex-col">

@@ -20,14 +20,14 @@ export default function About() {
             <Title2>
               About ME
             </Title2>
-            <p className="paragraph">
+            <p className="paragraph mb-6">
               I’m a software engineer specializing in building (and occasionally designing) exceptional digital experiences.
               Currently, I’m focused on building accessible , user friendly web applications.
             </p>
             <Title3>
               So why
             </Title3>
-            <p className="paragraph">
+            <p className="paragraph ">
               I enjoy creating things that live on the internet.
             </p>
             <Button>check my Resume</Button>

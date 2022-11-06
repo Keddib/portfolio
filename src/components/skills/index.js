@@ -39,7 +39,7 @@ export default function Skills() {
           </div>
         </div>
       </div>
-      <div className="section--default ">
+      <div className="">
         <div className="relative flex justify-end w-full overflow-hidden ">
           <div className="relative flex flex-col items-stretch h-auto w-[66.66666667vw] md:w-[58.33333333vw]">
             <span className="block overflow-hidden bg-none relative">

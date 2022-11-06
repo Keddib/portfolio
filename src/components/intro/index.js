@@ -62,7 +62,7 @@ export default function Intro() {
             </Number>
 
             <div className="relative pt-8">
-              <div className="heading--1 uppercase font-FivoSansModern font-bold text-[3rem] md:text-[5.75rem] lg:text-[8.75rem]">
+              <div className="heading--1 uppercase font-FivoSansModern font-bold text-[3rem] md:text-[5.75rem] lg:text-[8rem]">
                 <div ref={mainRef} className="absolute z-20 inline-block transform origin-center text-background dark:text-background-dark">
                   <div className="absolute bottom-0 z-0 bg-tertiary dark:bg-tertiary-dark -top-3 -right-3 -left-3 -sm:-top-2 -sm:-right-2 -sm:-left-2 md:-top-4 md:-left-5 md:-right-6"></div>
                   <div className="overflow-hidden">
