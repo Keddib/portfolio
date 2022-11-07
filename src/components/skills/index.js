@@ -12,7 +12,7 @@ export default function Skills() {
   return (
     <section className="section--default">
       <div className="grid grid-cols-24 gap-x-2.5">
-        <div className="col-start-3 col-end-25 md:col-start-3 md:col-end-23">
+        <div className="col-start-3 col-end-25 md:col-start-3 md:col-end-23 overflow-hidden">
           <div id="skills__text" className=" relative flex flex-col md:flex-row gap-4">
             <div className="md:w-1/3">
               <Number>02</Number>

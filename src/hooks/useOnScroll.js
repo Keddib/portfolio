@@ -11,12 +11,11 @@ export default function useAnimationOnScroll(id) {
 
       gsap.from(id, {
         delay: 0.1,
-        opacity: 0,
-        top: '30%',
+        yPercent: 100,
         duration: 1,
         scrollTrigger: {
           trigger: id,
-          start: "50% bottom",
+          start: "-30% bottom",
         }
       });
 

@@ -1,6 +1,6 @@
-import image1 from "public/images/10.webp"
-import image2 from "public/images/11.webp"
-import image3 from "public/images/12.webp"
+import image3 from "public/images/example-4.jpg"
+import image2 from "public/images/example-8.jpg"
+import image1 from "public/images/example-1.jpg"
 import Button from "src/components/button";
 import StackedImages from "src/components/stacked_images";
 

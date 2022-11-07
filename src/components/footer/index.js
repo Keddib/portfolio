@@ -12,7 +12,7 @@ export default function Footer() {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: elemRef.current,
-          start: "30% bottom",
+          start: "100% bottom",
         }
       });
       const sections = [...elemRef.current.children];
@@ -20,15 +20,13 @@ export default function Footer() {
         return gsap.from(sec, {
           duration: 1,
           yPercent: 100,
-          opacity: 0,
         });
       });
       animations.forEach((anim) => {
-        tl.add(anim, "<30%");
+        tl.add(anim, "<40%");
       })
     });
 
-    '#footer__animated'
     return () => {
       ctx.revert();
     }
@@ -37,7 +35,7 @@ export default function Footer() {
 
   return (
     <footer className="relative pt-[16.66666667vw]">
-      <div ref={elemRef} className="items-end grid grid-cols-24 gap-x-2.5">
+      <div ref={elemRef} className="items-end grid grid-cols-24 gap-x-2.5 overflow-hidden">
         <div className="hidden col-start-3 lg:block col-end-14 md:col-end-10 lg:col-end-8 relative">
           <div className="flex flex-col">
             <div className="relative">

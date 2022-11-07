@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useRef, useLayoutEffect } from "react";
 import { gsap, Linear } from "src/services/gasp";
 import Number from "src/components/number";
 import Asterisk from "src/components/asterisk";
@@ -10,10 +10,10 @@ export default function Intro() {
   const mainRef = useRef(null);
   const asteriskRef = useRef(null);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     let ctx = gsap.context(() => {
 
-      const tl = gsap.timeline();
+      const tl = gsap.timeline({ delay: 0.5 });
 
       const elems = [...miniRef.current.children];
       const words = [...titleRef.current.children];
@@ -23,7 +23,7 @@ export default function Intro() {
       });
 
       animations.forEach((anim) => {
-        tl.add(anim, "<30%");
+        tl.add(anim, "<80%");
       });
 
       animations = words.map(child => {
@@ -33,7 +33,7 @@ export default function Intro() {
         tl.add(anim, "<30%");
       })
 
-      tl.from(mainRef.current, { duration: 0.4, yPercent: 10, scaleY: 0, display: 'none' }, "<30%");
+      tl.from(mainRef.current, { duration: 0.4, yPercent: 10, scaleY: 0 }, "<30%");
       tl.to(mainRef.current, { duration: 0.4, rotate: '-2deg', }, "<30%");
       tl.from(asteriskRef.current, { duration: 0.5, scale: 0, rotation: "-360" },);
       tl.to(asteriskRef.current, { duration: 2, rotation: "360", ease: Linear.easeOut, repeat: -1 });

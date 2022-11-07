@@ -1,5 +1,5 @@
-import Img1 from "public/images/10.jpeg";
-import Img2 from "public/images/15.webp";
+import Img1 from "public/images/example-2.jpg";
+import Img2 from "public/images/example-7.jpg";
 import Button from "src/components/button";
 import Number from "src/components/number";
 import Title2 from "src/components/title2";
@@ -14,24 +14,26 @@ export default function About() {
   return (
     <>
       <section className='section--default'>
-        <div className='grid grid-cols-24'>
+        <div className='grid grid-cols-24' >
 
-          <div id="about__text" className=' relative flex flex-col justify-end  items-start  col-start-3 col-end-22 lg:col-end-10  '>
-            <Number>01</Number>
-            <Title2>
-              About ME
-            </Title2>
-            <p className="paragraph mb-6">
-              I’m a software engineer specializing in building (and occasionally designing) exceptional digital experiences.
-              Currently, I’m focused on building accessible , user friendly web applications.
-            </p>
-            <Title3>
-              So why
-            </Title3>
-            <p className="paragraph ">
-              I enjoy creating things that live on the internet.
-            </p>
-            <Button>check my Resume</Button>
+          <div className='relative flex flex-col justify-end  items-start  col-start-3 col-end-22 lg:col-end-10  overflow-hidden '>
+            <div id="about__text">
+              <Number>01</Number>
+              <Title2>
+                About ME
+              </Title2>
+              <p className="paragraph mb-6">
+                I’m a software engineer specializing in building (and occasionally designing) exceptional digital experiences.
+                Currently, I’m focused on building accessible , user friendly web applications.
+              </p>
+              <Title3>
+                So why
+              </Title3>
+              <p className="paragraph ">
+                I enjoy creating things that live on the internet.
+              </p>
+              <Button>check my Resume</Button>
+            </div>
           </div>
 
           <div className='col-start-1 col-end-25 lg:col-start-10 '>
