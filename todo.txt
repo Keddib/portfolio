@@ -1,0 +1,3 @@
+1 [] -> highlight the active page on the dashboard
+2 [] -> design the about page
+3 [] -> design the projects page

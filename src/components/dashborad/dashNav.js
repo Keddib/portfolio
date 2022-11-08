@@ -1,34 +1,25 @@
+import { useRouter } from "next/router";
 import Link from "next/link";
+import { useEffect } from "react";
+import DashLink from "./dashLink";
+
 
 export default function DashNavbar() {
+
+  const router = useRouter();
+
+  useEffect(() => {
+    console.log(router.pathname);
+  }, [router.pathname]);
+
   return (
     <nav>
       <ul className="text-primary dark:text-primary-dark uppercase font-heavy">
-        <li>
-          <Link href="/">
-            <span className="inline-block w-full py-1 hover:pl-2">Home</span>
-          </Link>
-        </li>
-        <li>
-          <Link href="/">
-            <span className="inline-block w-full py-1 hover:pl-2">About</span>
-          </Link>
-        </li>
-        <li>
-          <Link href="/">
-            <span className="inline-block w-full py-1 hover:pl-2">Projects</span>
-          </Link>
-        </li>
-        <li>
-          <Link href="/">
-            <span className="inline-block w-full py-1 hover:pl-2">Blog</span>
-          </Link>
-        </li>
-        <li>
-          <Link href="/">
-            <span className="inline-block w-full py-1 hover:pl-2">Contact</span>
-          </Link>
-        </li>
+        <DashLink link="/" name="home" />
+        <DashLink link="/contact" name="contact" />
+        <DashLink link="/blog" name="blog">
+          <span className="relative -top-2 right-0 text-xs font-medium text-tertiary dark:text-tertiary-dark">soon</span>
+        </DashLink>
       </ul>
     </nav>
   );
