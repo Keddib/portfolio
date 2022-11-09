@@ -56,6 +56,7 @@
   }
 
   /* html */
+
   @media (min-width: 1600px) {
     html {
       font-size: 18px;
@@ -81,6 +82,20 @@
       font-size: 26px;
     }
   }
+  @media (min-width:2600px) {
+    html {
+      font-size: 1.0769230769vw
+    }
+  }
+
+  /* body */
+
+  body {
+    font-family: Be Vietnam,sans-serif;
+    font-size: 1rem;
+    line-height: 1.625;
+    font-weight: 400;
+  }
 
   /*
   paadding for sections */
@@ -88,6 +103,17 @@
     position: static;
     padding-top: 8.33333333vw;
     padding-bottom: 8.33333333vw;
+  }
+
+  .heading {
+    font-weight: 700 !important;
+    line-height: 1;
+  }
+
+  .heading--1 {
+    font-size: 7.75rem;
+    line-height: .91;
+    text-transform: uppercase;
   }
 
   .heading--0 {

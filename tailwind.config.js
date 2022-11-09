@@ -66,8 +66,8 @@ module.exports = {
       'inverted-dark': '#1f1f1f'
     },
     fontFamily: {
-      FivoSansModern: ["Fivo sans modern", "Georgia", "serif"],
-      BeVietnam: ["Be vietnam", "Arial", "sans-serif"],
+      FivoSansModern: ["Fivo sans modern", "serif"],
+      BeVietnam: ["Be vietnam", "sans-serif"],
     },
     fontWeight: {
       light: 300,

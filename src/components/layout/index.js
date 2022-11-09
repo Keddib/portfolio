@@ -35,6 +35,9 @@ export default function Layout({ children, home }) {
   return (
     <div>
       <Head>
+        <meta charSet="UTF-8" />
+        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta
           name="description"
           content="Personal portfolio of a web developer"
@@ -51,15 +54,15 @@ export default function Layout({ children, home }) {
         <meta name="theme-color" content="#ffffff" />
         <title>{home}</title>
       </Head>
-      <main id="main-wrapper" className="relative flex flex-col h-screen bg-background dark:bg-background-dark text-primary dark:text-primary-dark">
+      <div id="main-wrapper" className="relative flex flex-col h-screen bg-background dark:bg-background-dark text-primary dark:text-primary-dark">
         <HintProvider>
           <Header setDarkTheme={setDarkMode} darkMode={darkMode} />
-          <div className="grow">
+          <main className="grow">
             {children}
-          </div>
+          </main>
           <Footer />
         </HintProvider>
-      </main>
+      </div>
     </div>
   );
 }

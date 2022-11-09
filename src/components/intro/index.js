@@ -1,6 +1,5 @@
-import { useRef, useLayoutEffect } from "react";
+import { useRef, useEffect } from "react";
 import { gsap, Linear } from "src/services/gasp";
-import Number from "src/components/number";
 import Asterisk from "src/components/asterisk";
 
 export default function Intro() {
@@ -10,7 +9,7 @@ export default function Intro() {
   const mainRef = useRef(null);
   const asteriskRef = useRef(null);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     let ctx = gsap.context(() => {
 
       const tl = gsap.timeline({ delay: 0.5 });
@@ -52,17 +51,17 @@ export default function Intro() {
       <div className="grid grid-cols-24 gap-x-2.5 ">
         <div className="col-start-3 col-end-23 xl:col-start-3 xl:col-end-19">
           <div className="w-full ">
-            <Number>
+            <p className="text-xl font-medium uppercase text-secondary">
               <span ref={miniRef} className=" relative text-left overflow-hidden inline-block">
                 <span className="inline-block relative mr-2">hi,</span>
                 <span className="inline-block relative mr-2">my</span>
                 <span className="inline-block relative mr-2">name</span>
                 <span className="inline-block relative mr-2">is</span>
               </span>
-            </Number>
+            </p>
 
             <div className="relative pt-8">
-              <div className="heading--1 uppercase font-FivoSansModern font-bold text-[3rem] md:text-[5.75rem] lg:text-[8rem]">
+              <div className="heading heading--1 uppercase font-FivoSansModern font-bold">
                 <div ref={mainRef} className="absolute z-20 inline-block transform origin-center text-background dark:text-background-dark">
                   <div className="absolute bottom-0 z-0 bg-tertiary dark:bg-tertiary-dark -top-3 -right-3 -left-3 -sm:-top-2 -sm:-right-2 -sm:-left-2 md:-top-4 md:-left-5 md:-right-6"></div>
                   <div className="overflow-hidden">

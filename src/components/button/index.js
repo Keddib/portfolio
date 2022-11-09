@@ -45,7 +45,7 @@ export default function Button({ children }) {
         <div
           onMouseEnter={onEnter}
           onMouseLeave={onLeave}
-          className="mt-[8.333333vw] md:mt-[4.16666667] inline-flex relative px-5 py-4 text-xs font-black uppercase font-display bg-tertiary dark:bg-tertiary-dark md:text-sm">
+          className="mt-[8.333333vw] md:mt-[4.16666667] inline-flex relative px-5 py-4 text-xs font-black uppercase font-display bg-tertiary dark:bg-tertiary-dark md:text-sm cursor-pointer">
           <span className="relative z-10 text-background dark:text-background-dark">{children}</span>
           <div className="absolute inset-0 flex items-center z-20 bg-tertiary dark:bg-tertiary-dark text-background dark:text-background-dark">
             <div ref={textRef} className="flex w-screen overflow-hidden flex-nowrap marquee">

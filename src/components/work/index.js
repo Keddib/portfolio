@@ -13,7 +13,7 @@ export default function Work() {
             <div className="block mb-6">
               <div className="inline">
                 <div className="inline-flex items-center tagline transform -translate-y-2">
-                  <span className="inline-block text-sm font-bold uppercase md:text-lg text-secondary font-display">what i build</span>
+                  <span className="inline-block text-sm font-bold uppercase md:text-lg text-secondary font-FivoSansModern">what i build</span>
                   <span className="inline-block mx-4 rounded-full shrink-0 md:mx-8 bg-secondary w-3.5 h-3.5 md:w-7 md:h-7"></span>
                 </div>
                 <div className="inline uppercase ">
