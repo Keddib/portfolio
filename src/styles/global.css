@@ -230,7 +230,7 @@
   transform: translate(-50%, -50%) rotate(0deg) !important
 }
 
-/* .stacked-images-full .stacked-image {
+.stacked-images-full .stacked-image {
   width: 100%;
   height: 100%
 }
@@ -253,7 +253,7 @@
 
 .stacked-images-full .stacked-image-delete {
   transform: rotate(0deg) !important
-} */
+}
 }
 
 @layer components {

@@ -8,7 +8,7 @@ import useHint from "src/hooks/useHint";
 
 // max images is 4. if we add one we need to add styling for it
 
-export default function StackedImages({ images }) {
+export default function StackedImages({ images, full }) {
 
   const imgParentRef = useRef(null);
   const tl = useRef(null);
@@ -54,7 +54,7 @@ export default function StackedImages({ images }) {
   return (
     <div
       id="stacked--images"
-      className="w-full h-full stacked-images"
+      className={`w-full h-full ${full ? 'stacked-images-full' : 'stacked-images'}`}
     >
       <div
         onClick={hundleStartClick}
