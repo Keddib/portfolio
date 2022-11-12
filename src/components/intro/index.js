@@ -32,9 +32,9 @@ export default function Intro() {
         tl.add(anim, "<30%");
       })
 
-      tl.from(mainRef.current, { duration: 0.4, yPercent: 10, scaleY: 0 }, "<30%");
+      tl.to(mainRef.current, { duration: 0.4, scaleY: 1 }, "<30%");
       tl.to(mainRef.current, { duration: 0.4, rotate: '-2deg', }, "<30%");
-      tl.from(asteriskRef.current, { duration: 0.5, scale: 0, rotation: "-360" },);
+      tl.to(asteriskRef.current, { duration: 0.5, scale: 1, rotate: "-360" },);
       tl.to(asteriskRef.current, { duration: 2, rotation: "360", ease: Linear.easeOut, repeat: -1 });
 
 
@@ -62,7 +62,7 @@ export default function Intro() {
 
             <div className="relative pt-8">
               <div className="heading heading--1 uppercase font-FivoSansModern font-bold">
-                <div ref={mainRef} className="absolute z-20 inline-block transform origin-center text-background dark:text-background-dark">
+                <div ref={mainRef} className="absolute z-20 inline-block transform origin-center text-background dark:text-background-dark scale-y-0">
                   <div className="absolute bottom-0 z-0 bg-tertiary dark:bg-tertiary-dark -top-3 -right-3 -left-3 -sm:-top-2 -sm:-right-2 -sm:-left-2 md:-top-4 md:-left-5 md:-right-6"></div>
                   <div className="overflow-hidden">
                     <span className="relative block text-background dark:text-background-dark">khalid</span>
