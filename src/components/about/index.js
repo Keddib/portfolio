@@ -1,5 +1,5 @@
-import Img2 from "public/images/1R5A0016.JPG";
-import Img1 from "public/images/1R5A0058.JPG";
+// import Img2 from "public/images/1R5A0016.JPG";
+// import Img1 from "public/images/1R5A0058.JPG";
 import Button from "src/components/button";
 import Number from "src/components/number";
 import Title2 from "src/components/title2";
@@ -38,8 +38,8 @@ export default function About() {
 
           <div className='col-start-1 col-end-25 lg:col-start-10 '>
             <div className="relative w-full pb-[150%] md:pb-[80%] ">
-              <ImageDrag img={Img1} className='draggable-position' name="about" />
-              <ImageDrag img={Img2} className='draggable-position2' name="work" />
+              <ImageDrag img={10} className='draggable-position' name="about" />
+              <ImageDrag img={10} className='draggable-position2' name="work" />
 
             </div>
           </div>

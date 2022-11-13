@@ -1,6 +1,6 @@
-import image3 from "public/images/1R5A0104.JPG"
-import image2 from "public/images/1R5A0059.JPG"
-import image1 from "public/images/1R5A9972.JPG"
+// import image3 from "public/images/1R5A0104.JPG"
+// import image2 from "public/images/1R5A0059.JPG"
+// import image1 from "public/images/1R5A9972.JPG"
 import Button from "src/components/button";
 import StackedImages from "src/components/stacked_images";
 
@@ -13,7 +13,7 @@ export default function Work() {
             <div className="block mb-6">
               <div className="inline">
                 <div className="inline-flex items-center tagline transform -translate-y-2">
-                  <span className="inline-block text-sm font-bold uppercase md:text-lg text-secondary font-FivoSansModern">what i build</span>
+                  <span className="inline-block text-sm font-bold uppercase md:text-lg text-secondary font-FivoSansModern">i build things</span>
                   <span className="inline-block mx-4 rounded-full shrink-0 md:mx-8 bg-secondary w-3.5 h-3.5 md:w-7 md:h-7"></span>
                 </div>
                 <div className="inline uppercase ">
@@ -28,13 +28,13 @@ export default function Work() {
                 </div>
               </div>
             </div>
-            <Button>
+            <Button>q
               Check my work
             </Button>
           </div>
         </div>
         <div className="relative z-10 w-full h-full pb-[100%] md:pb-0 md:absolute col-start-2 col-end-24 md:col-start-12 lg:col-start-14">
-          <StackedImages images={[image3, image2, image1]} />
+          <StackedImages images={[1, 2, 3]} />
         </div>
       </div>
     </section>

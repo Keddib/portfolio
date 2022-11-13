@@ -33,7 +33,7 @@ export default function Intro() {
       })
 
       tl.to(mainRef.current, { duration: 0.4, scaleY: 1 }, "<30%");
-      tl.to(mainRef.current, { duration: 0.4, rotate: '-2deg', }, "<30%");
+      tl.to(mainRef.current, { duration: 0.4, rotate: '-2deg', });
       tl.to(asteriskRef.current, { duration: 0.5, scale: 1, rotate: "-360" },);
       tl.to(asteriskRef.current, { duration: 2, rotation: "360", ease: Linear.easeOut, repeat: -1 });
 

@@ -1,11 +1,9 @@
 import Arrow from "public/icons/arrow.svg"
-import PatternFront from "public/icons/pattern_front.svg"
-import PatternBack from "public/icons/pattern_back.svg"
-import Img2 from "public/images/1R5A0016.JPG";
-import Img1 from "public/images/1R5A0058.JPG";
-import image3 from "public/images/1R5A0104.JPG"
-import image2 from "public/images/1R5A0059.JPG"
-import image1 from "public/images/1R5A9972.JPG"
+// import Img2 from "public/images/1R5A0016.JPG";
+// import Img1 from "public/images/1R5A0058.JPG";
+// import image3 from "public/images/1R5A0104.JPG"
+// import image2 from "public/images/1R5A0059.JPG"
+// import image1 from "public/images/1R5A9972.JPG"
 import Layout from "src/components/layout";
 import MovingText from "src/components/moving_text";
 import ImageDrag from "src/components/imagedrag";
@@ -14,33 +12,16 @@ import Title2 from "src/components/title2";
 import StackedImages from "src/components/stacked_images";
 import Image from "next/image";
 import Button from "src/components/button";
+import Intro from "src/components/intro2";
 
 export default function Work() {
   return (
     <Layout home="Keddib - Work">
-      <section className="relative section--default -md:pt-[33vw]">
-        <div className="relative flex justify-start w-full">
-          <div className="relative h-auto w-[66.66666667vw] my-[4.16666667vw] md:w-[58.33333333vw]" >
-            <span className="block overflow-hidden bg-none relative">
-              <span className="pt-[69.9873896595208%] block bg-none"></span>
-              <PatternBack className="absolute top-0 left-0 right-0 bottom-0 max-w-full min-w-full max-h-full min-h-full object-fill" />
-            </span>
-          </div>
-          <div className="absolute top-1/2 transform -translate-y-1/2 w-full heading heading--0 z-10">
-            <MovingText>
-              WORK <span className="text-9xl"> . </span>
-              WORK <span className="text-9xl"> . </span>
-              WORK <span className="text-9xl"> . </span>
-            </MovingText>
-          </div>
-          <div className="absolute top-0 left-0 my-[4.16666667vw] z-20 h-auto w-[66.66666667vw] md:w-[58.33333333vw]" >
-            <span className="block overflow-hidden bg-none relative w-full h-full ">
-              <span className="pt-[69.9873896595208%] block bg-none "></span>
-              <PatternFront className="absolute top-0 left-0 right-0 bottom-0 max-w-full min-w-full max-h-full min-h-full object-fill" />
-            </span>
-          </div>
-        </div>
-      </section>
+      <Intro>
+        WORK <span className="text-9xl"> . </span>
+        WORK <span className="text-9xl"> . </span>
+        WORK <span className="text-9xl"> . </span>
+      </Intro>
       <section className="section--default">
         <div className="grid grid-cols-24 gap-x-2.5">
           <div className="col-start-3 col-end-23 md:col-start-4 md:col-end-14 lg:col-end-11">
@@ -59,7 +40,7 @@ export default function Work() {
                   <h2 className="heading heading--4">30+ websites and job boards </h2>
                 </div>
                 <div className="relative w-full pb-[56.25%] mt-[3.75rem] bg-secondary border border-red">
-                  <Image className="object-cover" src={Img2} alt="project case" fill />
+                  {/* <Image className="object-cover" src={Img2} alt="project case" fill /> */}
                 </div>
                 <div className="flex flex-col w-full md:flex-row pt-[3.75rem]">
                   <div className="w-[66.66666667vw] md:w-[25vw]">
@@ -96,7 +77,7 @@ export default function Work() {
           <div className="order-2 col-start-3 md:order-1 col-end-23 md:col-start-4 md:col-end-12 md:z-10">
             <div className="relative w-full cursor-pointer pb-[100%] transform md:translate-x-12 md:translate-y-20 -rotate-[10deg] border">
               <div className='absolute inset-0 z-10 w-full h-full border border-black overflow-hidden'>
-                <Image src={image1} alt="test" />
+                {/* <Image src={image1} alt="test" /> */}
               </div>
               <div className="absolute z-30 flex items-center justify-center w-full h-full">
               </div>
@@ -105,7 +86,7 @@ export default function Work() {
           <div className="z-10 order-1 col-start-3 pt-16 md:pt-0 col-end-23 md:col-start-13 md:col-end-21 md:z-0">
             <div className="relative w-full cursor-pointer pb-[100%] transform md:-translate-y-4 rotate-[10deg]">
               <div className='absolute inset-0 z-10 w-full h-full border border-black overflow-hidden'>
-                <Image src={image1} alt="test" />
+                {/* <Image src={image1} alt="test" /> */}
               </div>
               <div className="absolute z-30 flex items-center justify-center w-full h-full">
                 <div className="flex justify-center w-screen overflow-hidden flex-nowrap marquee bg-transparent text-tertiary dark:text-tertiary-dark">

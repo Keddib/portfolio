@@ -236,23 +236,24 @@
 }
 
 .stacked-images-full .stacked-image:nth-child(4n+1) {
-  transform: rotate(-2deg)
+  transform: translate(calc(-50% + 6 * 1px - 10px), calc(-50% + 1 * 1px - 10px)) rotate(-2deg)
 }
 
 .stacked-images-full .stacked-image:nth-child(4n+2) {
-  transform: rotate(3deg)
+  transform: translate(calc(-50% + 10 * 1px - 10px), calc(-50% + 5 * 1px - 10px)) rotate(3deg)
 }
 
 .stacked-images-full .stacked-image:nth-child(4n+3) {
-  transform: rotate(2deg)
+  transform: translate(calc(-50% + 9 * 1px - 10px), calc(-50% + 4 * 1px - 10px)) rotate(2deg)
 }
 
 .stacked-images-full .stacked-image:nth-child(4n+4) {
-  transform: rotate(-1deg)
+  transform: translate(calc(-50% + 5 * 1px - 10px), calc(-50% + 10 * 1px - 10px)) rotate(-1deg)
 }
 
 .stacked-images-full .stacked-image-delete {
-  transform: rotate(0deg) !important
+    z-index: 0;
+  transform: translate(-50%, -50%) rotate(0deg) !important
 }
 }
 

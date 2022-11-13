@@ -1,3 +1,9 @@
-1 [] -> highlight the active page on the dashboard
-2 [] -> design the about page
-3 [] -> design the projects page
+1 [x] -> highlight the active page on the dashboard
+2 [x] -> design the about page
+3 [x] -> design the projects page
+4 [x] -> fix the intro page animation
+5 [x] -> rewrite the work section description at home page
+7 [x] -> write the intro description and experiences at about page
+6 [ ] -> complete the call of acions in about and work page
+8 [ ] -> project cases pics and descriptions...
+9 [ ] -> images later
