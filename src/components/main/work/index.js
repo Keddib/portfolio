@@ -1,6 +1,6 @@
-import image1 from "public/images/image_x3.JPG"
-import image2 from "public/images/image_x4.JPG"
-import image3 from "public/images/image_x5.JPG"
+import image1 from "public/images/image_x3.jpg"
+import image2 from "public/images/image_x4.jpg"
+import image3 from "public/images/image_x5.jpg"
 import { useRouter } from "next/router";
 import Button from "src/components/micro/button";
 import StackedImages from "src/components/micro/stacked_images";
