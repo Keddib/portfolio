@@ -1,3 +1,5 @@
+import project_one from "public/images/1R5A0079.JPG";
+
 const experiences = [
   {
     number: "01",
@@ -26,7 +28,15 @@ const experiences = [
     description: "Design and develop UI for an e-commerce platform using HTML5, Tailwindcss and Javascript",
     link: "https://www.joodek.com/ma"
   }
-]
+];
+
+const projects = [
+  {
+    image: project_one,
+    title: 'Personal Portfolio 2022',
+    description: "Design and develop UI for an e-commerce platform using HTML5, Tailwindcss and Javascript",
+  },
+];
 
 
-export { experiences }
+export { experiences, projects }
