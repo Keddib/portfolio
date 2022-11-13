@@ -111,7 +111,7 @@
   }
 
   .heading--1 {
-    font-size: 7.75rem;
+    font-size: 3rem;
     line-height: .91;
     text-transform: uppercase;
   }
@@ -141,6 +141,7 @@
       padding-bottom: 4.16666667vw;
     }
     .heading--1 {
+      font-size: 7.75rem;
       line-height: .91;
     }
     .heading--3 {

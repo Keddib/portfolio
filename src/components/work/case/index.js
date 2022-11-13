@@ -1,12 +1,18 @@
 import Image from "next/image";
+import { useRouter } from "next/router";
+import ImageCover from "src/components/micro/animated_cover";
 import Button from "src/components/micro/button";
 
 
 export default function Case({ project }) {
+
+  const router = useRouter();
+
   return (
     <li className="w-full case">
       <div className="relative w-full pb-[56.25%] bg-secondary">
         <Image className="object-cover" src={project.image} alt="project case" fill />
+        <ImageCover />
       </div>
       <div className="flex flex-col w-full md:flex-row pt-[3.75rem]">
         <div className="w-[66.66666667vw] md:w-[25vw]">
@@ -18,8 +24,10 @@ export default function Case({ project }) {
               <p>{project.description}</p>
             </div>
           </div>
-          <Button>
-            CHECK code source
+          <Button className="mt-6">
+            <a href={project.link} target="_blank" rel="noopener noreferrer">
+              CHECK code source
+            </a>
           </Button>
         </div>
       </div>

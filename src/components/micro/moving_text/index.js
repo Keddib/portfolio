@@ -1,17 +1,18 @@
 import { useRef, useEffect } from "react";
 import { gsap } from "src/services/gasp";
 
-export default function MovingText({ children }) {
+export default function MovingText({ children, className }) {
 
   const textRef = useRef(null);
+  const textWrraper = useRef(null);
 
 
   useEffect(() => {
 
     const cxt = gsap.context(() => {
 
-      gsap.from("#moving__text__wrapper", {
-        top: "50%",
+      gsap.from(textWrraper.current, {
+        top: "70%",
         duration: 2,
         scrollTrigger: {
           trigger: textRef.current,
@@ -39,7 +40,7 @@ export default function MovingText({ children }) {
   }, []);
 
   return (
-    <div id="moving__text__wrapper" className="inline-flex absolute top-[21%] heading uppercase w-full text-[4rem] md:text-[6rem] lg:text-[9.75rem]">
+    <div ref={textWrraper} className={`${className} inline-flex absolute heading uppercase w-full text-[4rem] md:text-[6rem] lg:text-[9.75rem]`}>
       <div className="absolute inset-0 flex items-center z-20">
         <div ref={textRef} className="flex w-screen overflow-hidden flex-nowrap marquee">
           <div className="flex items-center shrink-0 z-10 px-10">

@@ -1,8 +1,8 @@
 
-export default function Title4({ children }) {
+export default function Title4({ children, className }) {
   return (
-    <div>
-      <h4 className="heading heading--4">
+    <div className={`capitalize ${className}`}>
+      <h4 className="mb-6 heading heading--4 font-FivoSansModern">
         {children}
       </h4>
     </div>

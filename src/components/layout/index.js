@@ -8,12 +8,12 @@ export default function Layout({ children, home }) {
 
   const [darkMode, setDarkMode] = useState(false);
 
+  function setDarkTheme(value) {
+    setDarkMode(value);
+    localStorage.setItem('dark', value);
+  }
   useEffect(() => {
 
-    function setDarkTheme(value) {
-      setDarkMode(value);
-      localStorage.setItem('dark', value);
-    }
     const dark = localStorage.getItem('dark');
     if (dark && dark == 'true') {
       setDarkTheme(true);
@@ -56,7 +56,7 @@ export default function Layout({ children, home }) {
       </Head>
       <div id="main-wrapper" className="relative flex flex-col h-screen bg-background dark:bg-background-dark text-primary dark:text-primary-dark">
         <HintProvider>
-          <Header setDarkTheme={setDarkMode} darkMode={darkMode} />
+          <Header setDarkTheme={setDarkTheme} darkMode={darkMode} />
           <main className="grow">
             {children}
           </main>

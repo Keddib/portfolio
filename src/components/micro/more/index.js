@@ -2,12 +2,10 @@ import Arrow from "public/icons/arrow.svg";
 import { useRef, useEffect } from "react";
 import { gsap } from "src/services/gasp";
 import Number from "src/components/micro/number";
-import Title2 from "src/components/micro/title2";
+import Title4 from "src/components/micro/title4";
 import ImageCover from "src/components/micro/animated_cover";
 import Link from "next/link";
 import Image from "next/image";
-
-import mypic from "public/images/1R5A0079.JPG";
 
 const MoreImage = ({ image, text }) => {
 
@@ -50,7 +48,7 @@ const MoreImage = ({ image, text }) => {
   return (
     <>
       <div className='absolute inset-0 z-10 w-full h-full'>
-        <Image src={mypic} alt="test" />
+        <Image src={image} alt="test" />
         <ImageCover />
       </div>
       <div
@@ -93,29 +91,29 @@ const MoreImage = ({ image, text }) => {
 
 };
 
-export default function More({ number, images, calls, links }) {
+export default function More({ number, calls }) {
   return (
     <section className="section--default pt-[12.5vw] md:pt-[16.66666667vw] pb-[8.33333333vw]">
       <div className="grid grid-cols-24 gap-x-2.5">
         <div className="col-start-4 col-end-23">
           <Number>{number}</Number>
           <div>
-            <Title2 className="w-[37.5vw] md:w-[25vw] lg:w-[20.83333333vw]">
+            <Title4 className="w-full md:w-[25vw] lg:w-[20.83333333vw]">
               Want to see more?
-            </Title2>
+            </Title4>
           </div>
         </div>
         <div className="order-2 col-start-3 md:order-1 col-end-23 md:col-start-4 md:col-end-12 md:z-10">
-          <Link href="/">
-            <div className="relative w-full cursor-pointer pb-[100%] transform md:translate-x-12 md:translate-y-20 -rotate-[10deg] overflow-hidden border">
-              <MoreImage image={images[1]} text={calls[1]} />
+          <Link href={calls[0].link}>
+            <div className="relative w-full cursor-pointer pb-[100%] transform md:translate-x-12 md:translate-y-20 -rotate-[10deg] overflow-hidden">
+              <MoreImage image={calls[0].image} text={calls[0].text} />
             </div>
           </Link>
         </div>
         <div className="z-10 order-1 col-start-3 pt-16 md:pt-0 col-end-23 md:col-start-13 md:col-end-21 md:z-0">
-          <Link href="">
-            <div className="relative w-full cursor-pointer pb-[100%] transform md:-translate-y-4 rotate-[10deg]  overflow-hidden border">
-              <MoreImage image={images[0]} text={calls[0]} />
+          <Link href={calls[1].link}>
+            <div className="relative w-full cursor-pointer pb-[100%] transform md:-translate-y-4 rotate-[10deg]  overflow-hidden">
+              <MoreImage image={calls[1].image} text={calls[1].text} />
             </div>
           </Link>
         </div>

@@ -2,6 +2,7 @@ import Layout from "src/components/layout";
 import Intro from "src/components/micro/patterns";
 import Projects from "src/components/work/projects";
 import More from "src/components/micro/more";
+import { workCalls } from "src/data";
 
 export default function Work() {
   return (
@@ -12,7 +13,7 @@ export default function Work() {
         WORK <span className="text-9xl"> . </span>
       </Intro>
       <Projects />
-      <More number={4} images={[0, 1]} calls={["view work", "contact me"]} />
+      <More number={2} calls={workCalls} />
     </Layout>
   );
 }

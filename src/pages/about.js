@@ -5,7 +5,7 @@ import Experiences from "src/components/about/experiences";
 import Me from "src/components/about/me";
 import Catalog from "src/components/about/cataloge";
 import More from "src/components/micro/more";
-import { experiences } from "src/data";
+import { aboutCalls } from "src/data";
 
 export default function About() {
   return (
@@ -22,11 +22,11 @@ export default function About() {
 
       <Me />
 
-      <Experiences experiences={experiences} />
+      <Experiences />
 
       <Catalog />
 
-      <More number={4} images={[0, 1]} calls={["view work", "contact me"]} />
+      <More number={4} calls={aboutCalls} />
 
     </Layout>
   );

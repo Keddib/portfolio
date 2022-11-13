@@ -48,7 +48,7 @@ export default function Skills() {
             </span>
           </div>
 
-          <MovingText> react js. node js. c++. docker. javascript. html. css.</MovingText>
+          <MovingText className="top-[21%]"> react js. node js. c++. docker. javascript. html. css.</MovingText>
 
           <div className="absolute flex flex-col items-stretch top-0 right-0 z-20 h-full w-[66.66666667vw] md:w-[58.33333333vw]  ">
             <span className="block overflow-hidden bg-none relative w-full h-full ">

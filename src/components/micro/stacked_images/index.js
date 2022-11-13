@@ -84,13 +84,13 @@ export default function StackedImages({ images, full }) {
                 className="absolute h-full cursor-pointer w-[80%] top-1/2 left-1/2 stacked-image"
               >
                 <div className="relative w-full h-full bg-secondary overflow-hidden">
-                  {/* <Image
+                  <Image
                     className="object-cover"
                     src={img}
                     alt="me at work"
                     fill
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  /> */}
+                    sizes={`${full ? '100vw' : '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'}`}
+                  />
                   <ImageCover />
                 </div>
               </div>

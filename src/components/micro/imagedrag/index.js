@@ -79,14 +79,14 @@ export default function ImageDrag({ img, className, name }) {
         </div>
         <div className="flex relative w-full bg-secondary pb-[110%] ">
           <div className="absolute inset-0">
-            {/* <Image
+            <Image
               className="min-h-full min-w-full max-w-full max-h-full object-cover"
               src={img}
               alt="personal image"
               fill
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               priority
-            /> */}
+            />
             <ImageCover />
           </div>
         </div>

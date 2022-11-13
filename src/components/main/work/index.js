@@ -1,10 +1,18 @@
-// import image3 from "public/images/1R5A0104.JPG"
-// import image2 from "public/images/1R5A0059.JPG"
-// import image1 from "public/images/1R5A9972.JPG"
+import image1 from "public/images/image_x3.JPG"
+import image2 from "public/images/image_x4.JPG"
+import image3 from "public/images/image_x5.JPG"
+import { useRouter } from "next/router";
 import Button from "src/components/micro/button";
 import StackedImages from "src/components/micro/stacked_images";
 
 export default function Work() {
+
+  const router = useRouter();
+
+  function onClick() {
+    router.push('/work');
+  }
+
   return (
     <section className="section__default">
       <div className="relative grid grid-cols-24 gap-y-[16.66666667vw] md:gap-y-0 md:gap-x-2.5 py-[8.33333333vw]">
@@ -28,13 +36,13 @@ export default function Work() {
                 </div>
               </div>
             </div>
-            <Button className="mt-[8.333333vw] md:mt-[4.16666667]">
+            <Button action={onClick} className="mt-[8.333333vw] md:mt-[4.16666667]">
               Check my work
             </Button>
           </div>
         </div>
         <div className="relative z-10 w-full h-full pb-[100%] md:pb-0 md:absolute col-start-2 col-end-24 md:col-start-12 lg:col-start-14">
-          <StackedImages images={[1, 2, 3]} />
+          <StackedImages images={[image3, image2, image1]} />
         </div>
       </div>
     </section>

@@ -1,4 +1,6 @@
-import project_one from "public/images/1R5A0079.JPG";
+import project_one from "public/images/image_x12.jpg";
+import about_call_one from "public/images/image_x12.jpg";
+import about_call_two from "public/images/image_x13.png";
 
 const experiences = [
   {
@@ -35,8 +37,35 @@ const projects = [
     image: project_one,
     title: 'Personal Portfolio 2022',
     description: "Design and develop UI for an e-commerce platform using HTML5, Tailwindcss and Javascript",
+    link: "https://github.com/keddib/portfolio"
   },
 ];
 
+const aboutCalls = [
+  {
+    image: project_one,
+    text: 'check my work',
+    link: '/work'
+  },
+  {
+    image: project_one,
+    text: 'contact me',
+    link: '/contact'
+  }
+]
 
-export { experiences, projects }
+const workCalls = [
+  {
+    image: about_call_one,
+    text: 'check my work',
+    link: '/work'
+  },
+  {
+    image: about_call_two,
+    text: 'contact me',
+    link: '/contact'
+  },
+]
+
+
+export { experiences, projects, aboutCalls, workCalls }
