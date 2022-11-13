@@ -28,7 +28,7 @@ export default function Work() {
                 </div>
               </div>
             </div>
-            <Button>q
+            <Button className="mt-[8.333333vw] md:mt-[4.16666667]">
               Check my work
             </Button>
           </div>

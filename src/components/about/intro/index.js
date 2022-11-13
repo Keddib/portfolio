@@ -1,3 +1,5 @@
+import Button from "src/components/micro/button";
+
 export default function Intro() {
   return (
     <section className="section--default">
@@ -23,9 +25,12 @@ export default function Intro() {
                 </div>
               </div>
             </div>
-            <div className="w-full text-base md:text--lg md:w-2/5 wysiwyg js-reveal-child" >
+            <div className="w-full mb-8 text-base md:text--lg md:w-2/5 wysiwyg js-reveal-child" >
               <p>Pretty intresting, right? I am currently attending 1337 (42 Network) as a software engineering student and I had the chance to aquire some professonal experience at web developement too.</p>
             </div>
+            <Button className="" action={() => { console.log('download resume') }} >
+              check my resume
+            </Button>
           </div>
         </div>
       </div>

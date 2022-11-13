@@ -30,7 +30,7 @@ export default function About() {
               <p className="paragraph ">
                 I enjoy creating things that live on the internet.
               </p>
-              <Button>check my Resume</Button>
+              <Button className="mt-[8.333333vw] md:mt-[4.16666667]">check my Resume</Button>
             </div>
           </div>
 

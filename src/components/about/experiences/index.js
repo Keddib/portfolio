@@ -4,7 +4,7 @@ import Title2 from "src/components/micro/title2";
 
 export default function Experiences({ experiences }) {
   return (
-    <section className="relative section--default border">
+    <section className="relative section--default">
       <div className="grid grid-cols-24 gap-x-2.5">
         <div className="col-start-3 col-end-23 z-50 md:col-start-8 lg:col-start-10 md:col-end-22 pt-[8.33333333vw]">
           <ul className="flex flex-col space-y-20">

@@ -4,6 +4,6 @@
 4 [x] -> fix the intro page animation
 5 [x] -> rewrite the work section description at home page
 7 [x] -> write the intro description and experiences at about page
-6 [ ] -> complete the call of acions in about and work page
+6 [x] -> complete the call of acions in about and work page
 8 [ ] -> project cases pics and descriptions...
 9 [ ] -> images later
