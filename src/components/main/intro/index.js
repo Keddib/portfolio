@@ -1,6 +1,6 @@
 import { useRef, useEffect } from "react";
 import { gsap, Linear } from "src/services/gasp";
-import Asterisk from "src/components/asterisk";
+import Asterisk from "src/components/micro/asterisk";
 
 export default function Intro() {
 

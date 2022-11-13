@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import Head from 'next/head';
-import HintProvider from 'src/components/hint/HintProvider';
-import Header from 'src/components/header';
-import Footer from '../footer';
+import HintProvider from 'src/components/micro/hint/HintProvider';
+import Header from 'src/components/layout/header';
+import Footer from 'src/components/layout/footer';
 
 export default function Layout({ children, home }) {
 

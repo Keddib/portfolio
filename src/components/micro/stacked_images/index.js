@@ -2,7 +2,7 @@ import { useRef, useEffect } from "react";
 import { gsap } from "src/services/gasp";
 import { onMove } from "src/services/animationEvents";
 import Image from "next/image";
-import ImageCover from "src/components/animated_cover";
+import ImageCover from "src/components/micro/animated_cover";
 import useHint from "src/hooks/useHint";
 
 

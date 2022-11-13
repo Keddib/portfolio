@@ -1,6 +1,6 @@
 import PatternBack from "public/icons/pattern_back.svg"
 import PatternFront from "public/icons/pattern_front.svg"
-import MovingText from "src/components/moving_text";
+import MovingText from "src/components/micro/moving_text";
 
 export default function Intro({ children }) {
   return (

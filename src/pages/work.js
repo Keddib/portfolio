@@ -5,14 +5,14 @@ import Arrow from "public/icons/arrow.svg"
 // import image2 from "public/images/1R5A0059.JPG"
 // import image1 from "public/images/1R5A9972.JPG"
 import Layout from "src/components/layout";
-import MovingText from "src/components/moving_text";
-import ImageDrag from "src/components/imagedrag";
-import Number from "src/components/number";
-import Title2 from "src/components/title2";
-import StackedImages from "src/components/stacked_images";
+import MovingText from "src/components/micro/moving_text";
+import ImageDrag from "src/components/micro/imagedrag";
+import Number from "src/components/micro/number";
+import Title2 from "src/components/micro/title2";
+import StackedImages from "src/components/micro/stacked_images";
 import Image from "next/image";
-import Button from "src/components/button";
-import Intro from "src/components/intro2";
+import Button from "src/components/micro/button";
+import Intro from "src/components/micro/patterns";
 
 export default function Work() {
   return (

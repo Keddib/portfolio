@@ -1,10 +1,8 @@
-// import Img2 from "public/images/1R5A0016.JPG";
-// import Img1 from "public/images/1R5A0058.JPG";
-import Button from "src/components/button";
-import Number from "src/components/number";
-import Title2 from "src/components/title2";
-import Title3 from "src/components/title3";
-import ImageDrag from "src/components/imagedrag";
+import Button from "src/components/micro/button";
+import Number from "src/components/micro/number";
+import Title2 from "src/components/micro/title2";
+import Title3 from "src/components/micro/title3";
+import ImageDrag from "src/components/micro/imagedrag";
 import useAnimationOnScroll from "src/hooks/useOnScroll";
 
 export default function About() {

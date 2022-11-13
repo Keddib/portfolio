@@ -1,6 +1,6 @@
 import Link from "next/link";
-import Number from "src/components/number";
-import Title2 from "src/components/title2";
+import Number from "src/components/micro/number";
+import Title2 from "src/components/micro/title2";
 
 export default function Experiences({ experiences }) {
   return (

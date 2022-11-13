@@ -1,6 +1,6 @@
-import Dashboard from 'src/components/dashborad';
-import Logo from 'src/components/logo';
-import Hint from 'src/components/hint';
+import Dashboard from 'src/components/layout/dashborad';
+import Logo from 'src/components/micro/logo';
+import Hint from 'src/components/micro/hint';
 
 
 export default function Header({ setDarkTheme, darkMode }) {

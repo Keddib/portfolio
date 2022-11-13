@@ -2,7 +2,7 @@ import Image from 'next/image';
 import { useEffect, useRef, useState } from "react";
 import { onMove } from 'src/services/animationEvents';
 import { Draggable, gsap } from "src/services/gasp";
-import ImageCover from 'src/components/animated_cover';
+import ImageCover from 'src/components/micro/animated_cover';
 import useHint from 'src/hooks/useHint';
 
 export default function ImageDrag({ img, className, name }) {

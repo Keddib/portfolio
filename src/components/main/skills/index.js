@@ -1,9 +1,9 @@
 import TechsBack from "public/icons/techs_back.svg";
 import TechsFront from "public/icons/techs_front.svg";
-import Number from "src/components/number";
-import Title4 from "src/components/title4";
+import Number from "src/components/micro/number";
+import Title4 from "src/components/micro/title4";
 import useAnimationOnScroll from "src/hooks/useOnScroll";
-import MovingText from "src/components/moving_text";
+import MovingText from "src/components/micro/moving_text";
 
 export default function Skills() {
 

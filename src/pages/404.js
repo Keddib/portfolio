@@ -1,8 +1,8 @@
 import Layout from "src/components/layout";
 import { useRef, useEffect } from "react";
 import { gsap, Linear } from "src/services/gasp";
-import Number from "src/components/number";
-import Button from "src/components/button";
+import Number from "src/components/micro/number";
+import Button from "src/components/micro/button";
 
 export default function Custom404() {
 
