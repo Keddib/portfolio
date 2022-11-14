@@ -1,4 +1,5 @@
-import project_one from "public/images/image_x12.jpg"
+import project_one from "public/images/project_x1.jpg";
+import project_test from "public/images/image_x12.jpg";
 import work_image from "public/images/image_x12.jpg";
 import contact_image from "public/images/image_x13.jpg";
 
@@ -44,7 +45,7 @@ const projects = [
   {
     id: "02",
     name: "Pong",
-    image: project_one,
+    image: project_test,
     title: "Real Time Multiplayer Game",
     description: "A group project where we built a website for the mighty pong contest.A real- time multiplayer online game where users play pong against each other and create chat rooms.I was responsible of designing and developing the UI interface and configuring the application’s services using docker compose",
     link: "https://github.com/Keddib/Pong"
@@ -52,7 +53,7 @@ const projects = [
   {
     id: "03",
     name: "WebServ",
-    image: project_one,
+    image: project_test,
     title: "http sever from scratch with C++",
     description: "A team project. We wrote our own Http server form scratch with c++. I was responsible of designing and parsing a configuration file, generating a response based on the configation and making sure our implementation is conditionnal compliant with RFC 7230 to 7235.",
     link: "https://github.com/Keddib/webServer"
@@ -60,7 +61,7 @@ const projects = [
   {
     id: "04",
     name: "ft_services",
-    image: project_one,
+    image: project_test,
     title: "Kubernetes - Docker",
     description: "Setup of a Kubernetes cluster. Services include nginx, FTPS, Wordpress and PHPMyAdmin working with MySQL database, and Grafana linked to InfluxDB database for monitoring.I built custom Docker images for each of those, before deploying and exposing them all with custom Yaml files.",
     link: "https://github.com/Keddib/Ft_services"
