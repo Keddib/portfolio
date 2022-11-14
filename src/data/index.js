@@ -1,6 +1,6 @@
-import project_one from "public/images/image_x12.jpg";
-import about_call_one from "public/images/image_x12.jpg";
-import about_call_two from "public/images/image_x13.png";
+import project_one from "public/images/image_x12.jpg"
+import work_image from "public/images/image_x12.jpg";
+import contact_image from "public/images/image_x13.jpg";
 
 const experiences = [
   {
@@ -69,12 +69,12 @@ const projects = [
 
 const aboutCalls = [
   {
-    image: about_call_two,
+    image: contact_image,
     text: 'contact me',
     link: '/contact'
   },
   {
-    image: project_one,
+    image: work_image,
     text: 'check my work',
     link: '/work'
   },
@@ -82,14 +82,14 @@ const aboutCalls = [
 
 const workCalls = [
   {
-    image: about_call_two,
+    image: contact_image,
     text: 'contact me',
-    link: '/contact',
+    link: '/contact'
   },
   {
-    image: about_call_one,
+    image: work_image,
     text: 'check my github',
-    link: 'https://github.com/keddib',
+    link: 'https://github.com/keddib'
   },
 ]
 

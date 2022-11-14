@@ -6,4 +6,5 @@
 7 [x] -> write the intro description and experiences at about page
 6 [x] -> complete the call of acions in about and work page
 9 [x] -> images optimization
-8 [ ] -> project cases pics and descriptions...
+10 [] -> experiences discriptions
+11 [] -> projects discriptions and images

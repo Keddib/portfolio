@@ -1,6 +1,6 @@
-import image1 from "public/images/image_x11.png";
+import image1 from "public/images/image_x11.jpg";
 import image2 from "public/images/image_x10.jpg";
-import image3 from "public/images/image_x9.png";
+import image3 from "public/images/image_x9.jpg";
 import image4 from "public/images/image_x8.jpg";
 import StackedImages from "src/components/micro/stacked_images";
 
