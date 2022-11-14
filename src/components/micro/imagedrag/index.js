@@ -13,11 +13,12 @@ export default function ImageDrag({ img, className, name }) {
   const { setHintText, hintRef } = useHint();
 
 
-  const onEnter = () => {
+  const onEnter = (e) => {
     setHintText(isDraging ? 'now drag me' : 'grab me');
     if (hintRef) {
       hintRef.current.style.display = 'inline';
     }
+    onMove(e);
   };
 
 

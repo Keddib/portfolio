@@ -14,11 +14,12 @@ export default function StackedImages({ images, full }) {
   const tl = useRef(null);
   const { hintRef, setHintText } = useHint();
 
-  const onEnter = () => {
+  const onEnter = (e) => {
     setHintText('next');
     if (hintRef) {
       hintRef.current.style.display = 'inline';
     }
+    onMove(e);
   };
 
 

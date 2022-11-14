@@ -56,9 +56,10 @@ export default function Dashboard({ setDarkTheme, darkMode }) {
     }
   }, [show, md]);
 
-  const onEnter = () => {
+  const onEnter = (e) => {
     setHintText(clicked ? 'now drag me' : 'grab me');
     hintRef.current.style.display = 'inline';
+    onMove(e);
   }
 
   const onLeave = () => {

@@ -1,5 +1,5 @@
 import Dashboard from 'src/components/layout/dashborad';
-import Logo from 'src/components/micro/logo';
+import Logo from 'src/components/layout/logo';
 import Hint from 'src/components/micro/hint';
 
 

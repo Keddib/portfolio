@@ -6,11 +6,12 @@ export default function Asterisk({ elmRef }) {
 
   const { hintRef, setHintText } = useHint();
 
-  const onEnter = () => {
+  const onEnter = (e) => {
     setHintText('who ?');
     if (hintRef) {
       hintRef.current.style.display = 'inline';
     }
+    onMove(e);
   }
 
   const onLeave = () => {

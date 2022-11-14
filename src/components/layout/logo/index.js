@@ -16,18 +16,19 @@ export default function Logo() {
   const { hintRef, setHintText } = useHint();
   const router = useRouter();
 
-  const onEnter = ({ currentTarget }) => {
+  const onEnter = (e) => {
     setHintText(isDraging ? 'now drag me' : 'grab me');
     if (hintRef) {
       hintRef.current.style.display = 'inline';
     }
-    const svgEl = currentTarget.getElementsByTagName('svg');
+    const svgEl = e.currentTarget.getElementsByTagName('svg');
     let colorIndex = 0;
     const it = setInterval(() => {
       colorIndex = (colorIndex + 1) % 3;
       gsap.to(svgEl, { duration: 0, fill: colors[colorIndex] });
     }, 200);
     setInt(it);
+    onMove(e);
   };
 
 

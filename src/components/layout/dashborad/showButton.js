@@ -12,9 +12,10 @@ export default function ShowButton({ show, setShow }) {
     setHintText(show ? 'hide' : 'show');
   }, [show]);
 
-  const onEnter = () => {
+  const onEnter = (e) => {
     setHintText(show ? 'hide' : 'show');
     hintRef.current.style.display = 'inline';
+    onMove(e);
   }
 
   const onLeave = () => {

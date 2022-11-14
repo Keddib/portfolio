@@ -1,11 +1,30 @@
 import Logo from "public/icons/logo.svg";
 import { useEffect, useRef } from "react";
 import { gsap } from "src/services/gasp";
+import { onMove } from "src/services/animationEvents";
+import useHint from "src/hooks/useHint";
 
 
 export default function Footer() {
 
   const elemRef = useRef(null);
+  const { hintRef, setHintText } = useHint();
+
+  const onEnter = (e) => {
+    setHintText("let's connect");
+    if (hintRef) {
+      hintRef.current.style.display = 'inline';
+    }
+    onMove(e);
+  };
+
+
+  const onLeave = () => {
+    setHintText('');
+    if (hintRef) {
+      hintRef.current.style.display = 'none';
+    }
+  };
 
   useEffect(() => {
     let ctx = gsap.context(() => {
@@ -52,17 +71,34 @@ export default function Footer() {
           <div className="flex justify-between">
             <div className="flex flex-col" >
               <p className="text-lg font-extra-black uppercase text-tertiary font-display">Contact me</p>
-              <a href="mailto:keddib.codes@gmail.com" className="pt-1 font-medium  text-lg text-primary dark:text-primary-dark hover:text-tertiary dark:hover:text-tertiary-dark ">keddib.codes@gmail.com</a>
+              <div
+                onMouseEnter={onEnter}
+                onMouseLeave={onLeave}
+                onMouseMove={onMove}
+              >
+                <a href="mailto:keddib.codes@gmail.com" className="pt-1 font-medium  text-lg text-primary dark:text-primary-dark hover:text-tertiary dark:hover:text-tertiary-dark ">keddib.codes@gmail.com</a>
+              </div>
             </div>
             <div className="flex flex-col" >
               <p className="text-lg font-extra-black uppercase text-tertiary font-display">Follow me</p>
-              <div className="flex pt-1">
+              <div
+                className="flex pt-1"
+                onMouseEnter={onEnter}
+                onMouseLeave={onLeave}
+                onMouseMove={onMove}
+              >
                 <a href="https://www.linkedin.com/in/keddib/" className="text-primary dark:text-primary-dark hover:text-tertiary dark:hover:text-tertiary-dark  font-medium  text-lg" target="_blank" rel="noopener noreferrer">LinkedIn</a>
               </div>
             </div>
             <div className="flex flex-col" >
               <p className="text-lg font-extra-black uppercase text-tertiary font-display">github</p>
-              <a href="https://www.github.com/keddib" className="pt-1 font-medium  text-lg text-primary dark:text-primary-dark hover:text-tertiary dark:hover:text-tertiary-dark " target="_blank" rel="noopener noreferrer">Keddib</a>
+              <div
+                onMouseEnter={onEnter}
+                onMouseLeave={onLeave}
+                onMouseMove={onMove}
+              >
+                <a href="https://www.github.com/keddib" className="pt-1 font-medium  text-lg text-primary dark:text-primary-dark hover:text-tertiary dark:hover:text-tertiary-dark " target="_blank" rel="noopener noreferrer">Keddib</a>
+              </div>
             </div>
           </div>
         </div>
@@ -86,11 +122,11 @@ export default function Footer() {
         </div>
       </div>
       <div className="border-t border-solid border-primary dark:border-primary-dark grid grid-cols-24 gap-x-2.5 mt-[16.66666667vw] md:mt-[8.33333333vw]">
-        <div className="col-start-3 md:col-start-2 col-end-23">
-          <div className="flex flex-col items-center justify-between md:flex-row">
+        <div className="col-start-3 md:col-start-2 col-end-24">
+          <div className="flex flex-col items-center justify-between md:flex-row ">
             <p className="font-medium uppercase text-xxs">© Keddib, 2022</p>
             <div>
-              <div className="pointer-events-none w-12 my-2">
+              <div className="pointer-events-none w-12 my-2 ">
                 <Logo className="w-full h-full fill-primary dark:fill-primary-dark logo-svg" />
               </div>
             </div>
