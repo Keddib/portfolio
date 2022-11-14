@@ -5,7 +5,6 @@ import Layout from "src/components/layout";
 
 export default function Conatct() {
 
-  // useAnimationOnScroll("#contact__text");
 
   useEffect(() => {
 
@@ -51,7 +50,7 @@ export default function Conatct() {
               </div>
               <div className="order-3 md:order-2">
                 <span className="block mb-4 text--label">03</span>
-                <h2 className=" heading heading--4">Follow us</h2>
+                <h2 className=" heading heading--4">Follow me</h2>
                 <div className="inline-flex pt-4 space-x-4 md:pt-6">
                   <a target="_blank" rel="noreferrer noopener" className="group relative flex flex-col overflow-hidden text-xs font-heavy uppercase cursor-pointer" href="https://www.linkedin.com/in/keddib/">
                     <div className="relative z-10 text-tertiary dark:text-tertiary-dark border-b-2 border-b-tertiary dark:border-b-tertiary-dark transition-all group-hover:bg-tertiary dark:group-hover:bg-tertiary-dark group-hover:text-primary-dark dark:group-hover:text-primary">

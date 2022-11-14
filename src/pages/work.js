@@ -9,11 +9,11 @@ export default function Work() {
     <Layout home="Keddib - Work">
       <Intro>
         WORK <span className="text-9xl"> . </span>
-        WORK <span className="text-9xl"> . </span>
-        WORK <span className="text-9xl"> . </span>
+        PROJECTS <span className="text-9xl"> . </span>
+        PASSION <span className="text-9xl"> . </span>
       </Intro>
       <Projects />
-      <More number={2} calls={workCalls} />
+      <More number={5} calls={workCalls} />
     </Layout>
   );
 }

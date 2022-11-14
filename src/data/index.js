@@ -34,36 +34,62 @@ const experiences = [
 
 const projects = [
   {
+    id: "01",
+    name: "KEDB",
     image: project_one,
-    title: 'Personal Portfolio 2022',
+    title: 'Personal Portfolio',
     description: "Design and develop UI for an e-commerce platform using HTML5, Tailwindcss and Javascript",
     link: "https://github.com/keddib/portfolio"
+  },
+  {
+    id: "02",
+    name: "Pong",
+    image: project_one,
+    title: "Real Time Multiplayer Game",
+    description: "A group project where we built a website for the mighty pong contest.A real- time multiplayer online game where users play pong against each other and create chat rooms.I was responsible of designing and developing the UI interface and configuring the application’s services using docker compose",
+    link: "https://github.com/Keddib/Pong"
+  },
+  {
+    id: "03",
+    name: "WebServ",
+    image: project_one,
+    title: "http sever from scratch with C++",
+    description: "A team project. We wrote our own Http server form scratch with c++. I was responsible of designing and parsing a configuration file, generating a response based on the configation and making sure our implementation is conditionnal compliant with RFC 7230 to 7235.",
+    link: "https://github.com/Keddib/webServer"
+  },
+  {
+    id: "04",
+    name: "ft_services",
+    image: project_one,
+    title: "Kubernetes - Docker",
+    description: "Setup of a Kubernetes cluster. Services include nginx, FTPS, Wordpress and PHPMyAdmin working with MySQL database, and Grafana linked to InfluxDB database for monitoring.I built custom Docker images for each of those, before deploying and exposing them all with custom Yaml files.",
+    link: "https://github.com/Keddib/Ft_services"
   },
 ];
 
 const aboutCalls = [
   {
+    image: about_call_two,
+    text: 'contact me',
+    link: '/contact'
+  },
+  {
     image: project_one,
     text: 'check my work',
     link: '/work'
   },
-  {
-    image: project_one,
-    text: 'contact me',
-    link: '/contact'
-  }
 ]
 
 const workCalls = [
   {
-    image: about_call_one,
-    text: 'check my work',
-    link: '/work'
-  },
-  {
     image: about_call_two,
     text: 'contact me',
-    link: '/contact'
+    link: '/contact',
+  },
+  {
+    image: about_call_one,
+    text: 'check my github',
+    link: 'https://github.com/keddib',
   },
 ]
 
