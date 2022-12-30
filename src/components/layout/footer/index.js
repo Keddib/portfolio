@@ -76,7 +76,7 @@ export default function Footer() {
                 onMouseLeave={onLeave}
                 onMouseMove={onMove}
               >
-                <a href="mailto:keddib.codes@gmail.com" className="pt-1 font-medium  text-lg text-primary dark:text-primary-dark hover:text-tertiary dark:hover:text-tertiary-dark ">keddib.codes@gmail.com</a>
+                <a href="mailto:contact@keddib.tech" className="pt-1 font-medium  text-lg text-primary dark:text-primary-dark hover:text-tertiary dark:hover:text-tertiary-dark ">contact@keddib.tech</a>
               </div>
             </div>
             <div className="flex flex-col" >
@@ -116,7 +116,7 @@ export default function Footer() {
             </div>
             <div className="flex flex-col" >
               <p className="text-lg font-extra-black uppercase text-tertiary dark:text-tertiary-dark font-display">Contact me</p>
-              <a href="mailto:keddib.codes@gmail.com" className="pt-1 font-medium text-lg hover:text-tertiary dark:hover:text-tertiary-dark">keddib.codes@gmail.com</a>
+              <a href="mailto:contact@keddib.tech" className="pt-1 font-medium text-lg hover:text-tertiary dark:hover:text-tertiary-dark">contact@keddib.tech</a>
             </div>
           </div>
         </div>

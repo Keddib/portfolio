@@ -1,6 +1,7 @@
 import project_one from "public/images/project_x1.png";
 import project_two from "public/images/project_x2.jpg";
 import project_three from "public/images/project_x3.jpg";
+import project_four from "public/images/project_x4.png";
 import work_image from "public/images/image_x12.jpg";
 import contact_image from "public/images/image_x13.jpg";
 
@@ -36,11 +37,19 @@ const experiences = [
 
 const projects = [
   {
+    id: "00",
+    name: "NOTES",
+    image: project_four,
+    title: 'Personal Notebook',
+    description: "I struggle when it comes to choosing the best app for taking notes. So I created my own. Notes is a simple and elegent web app for quickly writing down notes. I developed it using React js, Redux js and Tailwindcss",
+    link: "https://github.com/Keddib/Knotes---app"
+  },
+  {
     id: "01",
     name: "KEDB",
     image: project_one,
     title: 'Personal Portfolio',
-    description: "Design and develop UI for an e-commerce platform using HTML5, Tailwindcss and Javascript",
+    description: "My personal portfolio www.keddib.tech which features some of my github projects as well as my resume and technical skills. I used Next.js, Tailwindcss and Gsap.js for animations. It's fully interactive",
     link: "https://github.com/keddib/portfolio"
   },
   {

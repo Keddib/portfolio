@@ -1,10 +1,13 @@
+import { useRef } from "react";
 import Button from "src/components/micro/button";
 
 export default function Intro() {
 
+  const FPDref = useRef(null);
 
   function onClick() {
-    // download resume
+    console.log('action', FPDref.current);
+    FPDref.current.click();
   }
 
   return (
@@ -34,13 +37,10 @@ export default function Intro() {
             <div className="w-full mb-8 text-base md:text--lg md:w-2/5 wysiwyg js-reveal-child" >
               <p>Pretty intresting, right? I am currently attending 1337 (42 Network) as a software engineering student and I had the chance to aquire some professonal experience at web developement too.</p>
             </div>
-
-            {
-              // I will add it latterr when my resume is ready
-              /* <Button className="" >
+              <Button action={onClick} >
                 check my resume
-              </Button> */
-            }
+              </Button>
+              <a ref={FPDref} href={"/resume.pdf"} target='_blank' className=""></a>
           </div>
         </div>
       </div>

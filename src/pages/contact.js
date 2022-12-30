@@ -39,7 +39,7 @@ export default function Conatct() {
                   <ul>
                     <li className="flex w-full ">
                       <p className="w-16 font-bold">email</p>
-                      <a href="mailto:keddib.codes@gmail.com" className="pl-6">keddib.codes@gmail.com</a>
+                      <a href="mailto:contact@keddib.tech" className="pl-6">contact@keddib.tech</a>
                     </li>
                     <li className="flex w-full ">
                       <p className="w-16 font-bold">mobile</p>
