@@ -39,7 +39,7 @@ export default function Case({ project }) {
             </div>
           </div>
           <Button className="mt-6" action={onClick}>
-            CHECK code source
+            CHECK source code
           </Button>
         </div>
       </div>
